@@ -16,8 +16,7 @@ RUN rpm -e --nodeps curl-minimal && \
     dnf config-manager --set-enabled ubi-9-appstream-rpms && \
     rpm -ivh https://download1.rpmfusion.org/free/el/rpmfusion-free-release-9.noarch.rpm https://download1.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-9.noarch.rpm && \
     dnf config-manager --set-enabled rpmfusion-free-updates rpmfusion-nonfree-updates && \
-    microdnf install -y SDL2 && \
-    microdnf install -y ffmpeg && \
+    dnf install -y SDL2 ffmpeg && \
     microdnf clean all && \
     rm -rf /var/cache/yum
 
