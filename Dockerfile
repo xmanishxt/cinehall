@@ -1,22 +1,18 @@
 # CineHall Custom Image for OpenShift
-# Base: UBI 9 minimal (Red Hat Universal Base Image) - non-root compatible
-FROM registry.access.redhat.com/ubi9/ubi-minimal:9.5
+# Base: UBI 9 (full, not minimal) - includes AppStream with more packages
+FROM registry.access.redhat.com/ubi9/ubi:9.5
 
 # Install Node.js 20 from NodeSource, yt-dlp, ffmpeg, python3
-# Use dnf (not microdnf) for full repo support including SDL2 dependency for ffmpeg
+# Use dnf for full repo support including SDL2 dependency for ffmpeg
 RUN rpm -e --nodeps curl-minimal && \
     microdnf install -y curl python3 python3-pip shadow-utils && \
     microdnf clean all && \
     rm -rf /var/cache/yum && \
     curl -fsSL https://rpm.nodesource.com/setup_20.x | bash - && \
     microdnf install -y nodejs && \
-    rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm && \
-    microdnf install -y dnf dnf-plugins-core && \
     dnf config-manager --set-enabled ubi-9-appstream-rpms && \
-    dnf config-manager --set-enabled epel && \
-    rpm -ivh https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-9.noarch.rpm https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-9.noarch.rpm && \
-    dnf config-manager --set-enabled rpmfusion-free-updates rpmfusion-nonfree-updates && \
-    dnf install -y SDL2-devel ffmpeg && \
+    dnf config-manager --set-enabled ubi-9-codeready-builder && \
+    dnf install -y ffmpeg && \
     dnf clean all && \
     rm -rf /var/cache/dnf
 
