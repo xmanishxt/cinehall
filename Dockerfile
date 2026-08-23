@@ -3,8 +3,7 @@
 FROM registry.access.redhat.com/ubi9/ubi-minimal:9.5
 
 # Install Node.js 20 from NodeSource, yt-dlp, ffmpeg, python3
-# Use rpm to remove curl-minimal, then install curl in same RUN
-# Install ffmpeg from RPM Fusion (not available in UBI base repos)
+# Use dnf (not microdnf) for full repo support including SDL2 dependency for ffmpeg
 RUN rpm -e --nodeps curl-minimal && \
     microdnf install -y curl python3 python3-pip shadow-utils && \
     microdnf clean all && \
@@ -15,10 +14,10 @@ RUN rpm -e --nodeps curl-minimal && \
     microdnf install -y dnf dnf-plugins-core && \
     dnf config-manager --set-enabled ubi-9-appstream-rpms && \
     rpm -ivh https://download1.rpmfusion.org/free/el/rpmfusion-free-release-9.noarch.rpm https://download1.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-9.noarch.rpm && \
-    dnf config-manager --set-enabled rpmfusion-free-updates rpmfusion-nonfree-updates ubi-9-appstream-rpms && \
-    dnf install -y SDL2 ffmpeg && \
-    microdnf clean all && \
-    rm -rf /var/cache/yum
+    dnf config-manager --set-enabled rpmfusion-free-updates rpmfusion-nonfree-updates && \
+    dnf install -y ffmpeg && \
+    dnf clean all && \
+    rm -rf /var/cache/dnf
 
 # Install yt-dlp via pip (latest version)
 RUN pip3 install --no-cache-dir --break-system-packages yt-dlp
