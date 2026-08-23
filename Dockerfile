@@ -4,7 +4,7 @@ FROM registry.access.redhat.com/ubi9/ubi:9.5
 
 # Install Node.js 20 from NodeSource, yt-dlp, ffmpeg, python3
 # Install EPEL first, then RPM Fusion free/nonfree for ffmpeg + SDL2
-# Use --enablerepo to install from RPM Fusion repos (base repos are named differently)
+# Use actual repo IDs: rpmfusion-free-updates and rpmfusion-nonfree-updates
 RUN rpm -e --nodeps curl-minimal && \
     dnf install -y curl python3 python3-pip shadow-utils && \
     dnf clean all && \
@@ -14,7 +14,7 @@ RUN rpm -e --nodeps curl-minimal && \
     dnf config-manager --set-enabled ubi-9-codeready-builder-rpms && \
     dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm && \
     dnf install -y https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-9.noarch.rpm https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-9.noarch.rpm && \
-    dnf install -y --enablerepo=rpmfusion-free --enablerepo=rpmfusion-nonfree ffmpeg && \
+    dnf install -y --enablerepo=rpmfusion-free-updates --enablerepo=rpmfusion-nonfree-updates ffmpeg && \
     dnf clean all && \
     rm -rf /var/cache/dnf
 
