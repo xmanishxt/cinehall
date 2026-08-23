@@ -1,0 +1,18 @@
+# CineHall — Cloudflare Workers deployment config
+# Deploy: bash deploy.sh   (CF_TOKEN env var required, see SETUP.md)
+name = "cinehall"
+main = "worker.js"
+compatibility_date = "2026-01-01"
+
+# static site (public/) served by the same worker — edges cache it (1d)
+assets = { directory = "../public", binding = "ASSETS" }
+
+# KV: catalog snapshot + auto-guard day counter + lock flag
+kv_namespaces = [{ binding = "KV", id = "__KV_ID__", preview_id = "__KV_PREVIEW_ID__" }]
+
+# secret for /api/warm + /api/guard (protected endpoints)
+[vars]
+WARM_KEY = "cinehall-warm-2026"
+
+# After the domain is bought & its zone is active in Cloudflare, uncomment:
+# routes = [{ pattern = "cinehall.xyz/*", zone_name = "cinehall.xyz" }]

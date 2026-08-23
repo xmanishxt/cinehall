@@ -1,0 +1,14 @@
+HTTP/2 200 
+content-length: 217791
+content-type: text/html;charset=utf-8
+date: Fri, 07 Aug 2026 19:41:02 GMT
+set-cookie: i18n_lang=en; Path=/; Expires=Sat, 07 Aug 2027 19:41:02 GMT; SameSite=Lax
+vary: Accept-Encoding
+x-powered-by: Nuxt
+x-trace-id: 0a21c8981786131662680083e7537e5a
+req-cost-time: 85
+req-arrive-time: 1786131662680
+resp-start-time: 1786131662765
+x-envoy-upstream-service-time: 85
+server: istio-envoy
+

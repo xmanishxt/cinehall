@@ -1,0 +1,294 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fatoş (2024)</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest'></script>
+<script type="text/javascript">
+if (window === window.top) {
+  window.location.replace("https://www.2embed.skin/movie/movie/tt1375666");
+}
+function go(loc) { document.getElementById('iframesrc').src = loc; }
+</script>
+<style type="text/css">
+body, html
+{
+  margin: 0; padding: 0; height: 100%; overflow: hidden;
+}
+
+#content
+{
+  position:absolute; left: 0; right: 0; bottom: 0; top: 0px; 
+}
+
+.loading {
+  background-color:#000;
+  background-image:url('https://image.tmdb.org/t/p/original/i6QjZ70yEaRbkgn9Q17HNKTZHwy.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  filter: blur(2px) brightness(60%);
+  position:absolute;
+  top:0px;
+  bottom:0px;
+  right:0px;
+  left:0px;
+}
+iframe {
+  background:#000 url(/images/loading.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 500px;
+}
+.dropbtn {
+  background: none;
+  color: #eee;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+.dropbtn:hover { opacity: 1; }
+.dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 999;
+  margin: 10px;
+  transition: 1s;
+  text-align: center; 
+}
+.dropdown a { color: #fff; text-decoration: none; font-family: tahoma; }
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  overflow: auto;
+  z-index: 1;
+  width: max-content;
+  margin-top: -40px;
+}
+
+.dropdown-content a {
+  background: #222;
+  color: #fff;
+  padding: 16px;
+  text-decoration: none;
+  display: inline-block;
+  opacity: 0.9;
+  margin-bottom: 2px;
+  font-size: 14px;
+}
+
+.dropdown a:hover { opacity:1 }
+.show { display: grid; margin-left: 58px; height: auto; overflow-x: scroll; }
+
+/* --- Sandbox error overlay --- */
+#sbxErr{
+  position:absolute; inset:0; display:none;
+  align-items:center; justify-content:center; text-align:center;
+  background:rgba(10,10,12,.88); color:#fff; z-index:99999; padding:20px;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+}
+#sbxErr h4{ margin:0 0 10px; font-size:clamp(18px,6vw,28px); }
+#sbxErr p{ margin:0; opacity:.92; font-size:clamp(14px,4.5vw,18px); }
+</style>
+</head>
+<body>
+<div class="dropdown" style="display:none;">
+  <div class="breath">
+    <a href="https://blackninja.host/" target="_blank"><span style="font-size:8px;">Servers</span></a>
+    <button onclick="myFunction()" class="dropbtn" title="Streaming Servers CAM" style="display:block;"><i class="dropbtn fa fa-bars" style="font-size:30px;"></i></button>
+  </div>
+  <div id="myDropdown" class="dropdown-content">
+    
+      <a href="javascript:void(0);" onclick="go('https://streamsrcs.2embed.cc/xps?imdb=tt34806899')"><i class="fa fa-play"></i> &nbsp;Xps</a>
+    
+      <a href="javascript:void(0);" onclick="go('https://streamsrcs.2embed.cc/vnest?tmdb=1375666')"><i class="fa fa-play"></i> &nbsp;Cnby</a>
+    
+      <a href="javascript:void(0);" onclick="go('https://streamsrcs.2embed.cc/vcr?tmdb=1375666')"><i class="fa fa-play"></i> &nbsp;Vcr</a> 
+    
+  </div>
+</div>
+
+<div id="content">
+
+  <div style="position:absolute;top:150px;left:5px;" title="Download Video">    
+	<form method="post" action="https://dlhub.cc/search" target="_blank">
+	  <input type="hidden" name="q" value="Fatoş (2024)">
+	  <input type="hidden" name="source" value="movies">
+	  <button style="background:none;border:none;cursor:pointer;"><img src="/images/download.png" style="width:40px;"></button>
+	</form>	
+  </div>
+
+  <div id="bgImage" class="loading" style="display:block;"></div>
+    <div onclick="bgImage();" class="playbtnx" style="position:absolute;top:35%;width:100%;text-align:center;cursor:pointer;">
+    <img src="/images/play4.png" alt="play icon" style="width:4.5em;">
+    <h4 style="color:#fff;font-family:verdana;font-weight:normal;text-shadow:0px 0px 10px #000;">
+      Fatoş (2024)    </h4>   
+  </div>  
+<script src="https://tagivi.com/1/82896b2332b74dfc6fec71bfcd31cba6"></script>
+ 
+  <iframe id="iframesrc" src="about:blank" data-src="https://streamsrcs.2embed.cc/vnest?tmdb=1375666" width="100%" height="100%" scrolling="no" frameborder="0" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>  
+
+  <div id="sbxErr" style="display:none; background-image:linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)), url('https://image.tmdb.org/t/p/original/i6QjZ70yEaRbkgn9Q17HNKTZHwy.jpg');background-position:center center;background-repeat:no-repeat;background-size:cover;">
+    <div>
+      <h4>Sandbox not allowed</h4>
+      <p>Remove <code style="background:#1e1f22;padding:.08em .45em;border-radius:.35em;">sandbox</code> from the iframe to play.</p>
+    </div>
+  </div>
+
+  <img src="https://whos.amung.us/widget/pcstream/" style="display:none;">
+</div>
+<script>
+function cpFunction() {
+  var copyText = document.getElementById("cptxt");
+  if (!copyText) return;
+
+  var textToCopy = copyText.value || copyText.getAttribute("value") || "";
+
+  if (!textToCopy) return;
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(textToCopy).then(function () {
+      alert("Copied the text: " + textToCopy);
+    }).catch(function () {
+      fallbackCopyText(textToCopy);
+    });
+  } else {
+    fallbackCopyText(textToCopy);
+  }
+}
+
+function fallbackCopyText(text) {
+  var temp = document.createElement("textarea");
+  temp.value = text;
+  temp.setAttribute("readonly", "");
+  temp.style.position = "fixed";
+  temp.style.top = "-9999px";
+  temp.style.left = "-9999px";
+  document.body.appendChild(temp);
+  temp.focus();
+  temp.select();
+
+  try {
+    document.execCommand("copy");
+    alert("Copied the text: " + text);
+  } catch (e) {
+    alert("Copy failed. Please copy manually:\n\n" + text);
+  }
+
+  document.body.removeChild(temp);
+}
+
+function isReallySandboxed() {
+  try {
+    if (window.top === window.self) return false;
+  } catch (e) {
+    // if even this fails, do not assume sandbox
+    return false;
+  }
+
+  // 1) direct sandbox attribute check
+  try {
+    var fe = window.frameElement;
+    if (fe && fe.hasAttribute && fe.hasAttribute('sandbox')) {
+      return true;
+    }
+  } catch (e) {}
+
+  // 2) sandbox without allow-same-origin often gives unique origin "null"
+  try {
+    if (String(window.location.origin).toLowerCase() === "null") {
+      return true;
+    }
+  } catch (e) {}
+
+  // 3) sandbox often blocks document.domain access/set
+  try {
+    var dd = document.domain;
+    document.domain = dd;
+  } catch (e) {
+    return true;
+  }
+
+  return false;
+}
+
+function startPlayer(e) {
+  if (e && isReallySandboxed()) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    var sbxErr = document.getElementById('sbxErr');
+    if (sbxErr) sbxErr.style.display = 'flex';
+    return false;
+  }
+
+  var iframe = $("#iframesrc");
+  if (iframe.length && iframe.attr("src") === "about:blank") {
+    iframe.attr("src", iframe.data("src"));
+  }
+  $(".dropdown").show();
+  bgImage();
+  return true;
+}
+
+$(".playbtnx").click(function(e){
+  return startPlayer(e);
+});
+
+$(function(){
+  if (!$(".playbtnx:visible").length && $("#iframesrc").length) {
+    startPlayer();
+  }
+});
+
+function bgImage() {
+  var x = document.getElementById("bgImage");
+  if (!x) return;
+
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.remove();
+    $(".playbtnx").hide();
+  }
+}
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+<script>
+(function(){
+  var r = document.referrer || '';
+  try {
+    if (navigator.sendBeacon) {
+      var d = new URLSearchParams();
+      d.append('r', r);
+      navigator.sendBeacon('/refcheck.php?ingest=1', d);
+    } else {
+      new Image().src = '/refcheck.php?ingest=1&r=' + encodeURIComponent(r) + '&t=' + Date.now();
+    }
+  } catch(e){}
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+HTTP/2 301 
+content-type: text/html; charset=utf-8
+content-length: 194
+location: https://h5.aoneroom.com/detail/beast-hindi-IUFU79vsw71?share=eyJ1aWQiOjg3MDI0MTYxNTM1NTEwMzA3MDQsInRpbWVzdGFtcCI6MTc4NjEzMDMyOCwiaXAiOiIyMjMuMTgxLjM1LjgwIn0%3D
+x-trace-id: 0a21cb3517861316478720049ee4fc45
+date: Fri, 07 Aug 2026 19:40:47 GMT
+req-cost-time: 62
+req-arrive-time: 1786131647818
+resp-start-time: 1786131647880
+x-envoy-upstream-service-time: 62
+vary: Accept-Encoding
+server: istio-envoy
+x-cache: Miss from cloudfront
+via: 1.1 42a545bbdcaa487440aee4a90b7c6614.cloudfront.net (CloudFront)
+x-amz-cf-pop: DEL54-P4
+x-amz-cf-id: RH3Jlj0rBLN0284ET2BRtC-B27njH3EHCnSckD49M3ha6o-7kN3CZg==
+cdn: Transsion
+vary: Origin
+

@@ -1,0 +1,13 @@
+{
+  "error": {
+    "code": 400,
+    "message": "ADMIN_ONLY_OPERATION",
+    "errors": [
+      {
+        "message": "ADMIN_ONLY_OPERATION",
+        "domain": "global",
+        "reason": "invalid"
+      }
+    ]
+  }
+}

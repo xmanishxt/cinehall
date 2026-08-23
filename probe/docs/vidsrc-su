@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="dynamic-title">Loading...</title>
+    <script data-cfasync="false" async type="text/javascript" src="//rq.alchemmauls.com/rngyyDpC5ns/QALrl"></script>
+    <script defer src="https://1414.hexa.su/script.js" data-website-id="bc4a4802-0bbc-481f-a1ce-470d99f8febb"></script>
+    <script>
+      function getCurrentDomain() {
+        const hostname = window.location.hostname;
+        if (hostname === 'localhost' || hostname === '127.0.0.1') {
+          return 'localhost';
+        }
+        const parts = hostname.split('.');
+        if (parts.length >= 2) {
+          return parts[parts.length - 2];
+        }
+        return hostname;
+      }
+      
+      function getCurrentFullDomain() {
+        return `${window.location.protocol}//${window.location.host}`;
+      }
+      
+      document.addEventListener('DOMContentLoaded', function() {
+        const domain = getCurrentDomain();
+        const fullDomain = getCurrentFullDomain();
+        
+        const titleElement = document.getElementById('dynamic-title');
+        if (titleElement) {
+          titleElement.textContent = domain.charAt(0).toUpperCase() + domain.slice(1);
+        }
+      });
+    </script>
+    <script type="module" crossorigin src="/assets/index-C95Fz_nV.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/react-vendor-CDqfis5f.js">
+    <link rel="modulepreload" crossorigin href="/assets/ui-vendor-D1YVVDL6.js">
+    <link rel="modulepreload" crossorigin href="/assets/player-vendor-BfEgDoR5.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-ClqcQBZ1.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html> 

@@ -1,0 +1,1 @@
+{"error":"TypeError","message":"streamData.map is not a function","stack":"at Hdmovie.fetchSources (/app/src/routes/hdmovie/index.ts:168:27). at processTicksAndRejections (node:internal/process/task_queues:95:5). at async Hdmovie.loadSourcesByTitle (/app/src/routes/hdmovie/index.ts:229:29)","statusCode":500}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Player</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;height:100%;overflow:hidden;background:#000;display:flex;align-items:center;justify-content:center}
+#ts-sp{width:44px;height:44px;border:3px solid rgba(255,255,255,.1);border-top-color:rgba(255,255,255,.85);border-radius:50%;animation:spin .75s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+<div id="ts-sp"></div>
+<div class="cf-turnstile"
+     data-sitekey="0x4AAAAAADfkTnMxCBQ5ki90"
+     data-callback="tsPass"
+     data-error-callback="tsErr"
+     data-size="invisible"></div>
+<script>
+function tsPass(token){
+    fetch('/embed/turnstile-verify.php',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({token:token})
+    })
+    .then(function(r){return r.json();})
+    .then(function(d){
+        if(d.success){
+            try{
+                var u=new URL(window.location.href);
+                u.searchParams.set('_tsv',d.url_token);
+                window.location.replace(u.toString());
+            }catch(e){ window.location.reload(); }
+        } else {
+            if(typeof turnstile!=='undefined') turnstile.reset();
+        }
+    })
+    .catch(function(){ window.location.reload(); });
+}
+function tsErr(){ window.location.reload(); }
+</script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</body>
+</html>

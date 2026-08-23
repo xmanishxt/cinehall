@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>CineHall — Movies &amp; TV Series</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header id="header">
+  <div class="nav-left">
+    <div class="brand" id="brand">Cine<span class="dot">Hall</span></div>
+    <nav id="nav">
+      <a data-cat="home" class="active">Home</a>
+      <a data-cat="movies">Movies</a>
+      <a data-cat="series">Series</a>
+    </nav>
+  </div>
+  <div class="nav-right">
+    <div class="search-wrap">
+      <input type="text" class="search-box" id="searchBox" placeholder="Search movies, series..." autocomplete="off">
+      <div class="search-results" id="searchResults"></div>
+    </div>
+    <div class="avatar" id="avatar">CH</div>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="scrim" id="scrim"></div>
+<nav class="mobile-nav" id="mobileNav">
+  <a data-cat="home" class="active">Home</a>
+  <a data-cat="movies">Movies</a>
+  <a data-cat="series">Series</a>
+</nav>
+
+<main id="main"><section class="hero" id="hero"><div class="hero-slide active" data-slide="0" style="background-image:url('https://image.tmdb.org/t/p/w1280/vyG93jhmPL7tBIhRtCLa5mdBKob.jpg')">
+      <div class="hero-content">
+        <div class="hero-content-inner">
+          <div class="hero-badge">Now Streaming</div>
+          <h1 class="hero-title">Teach You a Lesson</h1>
+          <div class="hero-tags"><span class="year">2026</span><span class="rating"><span class="star">★</span> 9.4</span><span class="studio">TV SERIES</span></div>
+          <p class="hero-desc">An inspector from the Educational Rights Protection Bureau (ERPB) who is authorized by the government to use physical intervention and unconventional methods to discipline delinquent students and reform the educational system.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/watch/tv/276161">▶ &nbsp;Watch Now</a>
+            <a class="btn btn-icon" href="/watch/tv/276161" title="Info">ℹ</a>
+          </div>
+        </div>
+      </div>
+    </div><div class="hero-slide " data-slide="1" style="background-image:url('https://image.tmdb.org/t/p/w1280/wh5agdl3b7fqC7mSjsCkHx4fMAs.jpg')">
+      <div class="hero-content">
+        <div class="hero-content-inner">
+          <div class="hero-badge">Now Streaming</div>
+          <h1 class="hero-title">Dutton Ranch</h1>
+          <div class="hero-tags"><span class="year">2026</span><span class="rating"><span class="star">★</span> 9.2</span><span class="studio">TV SERIES</span></div>
+          <p class="hero-desc">Rip Wheeler and Beth Dutton gamble everything on a new life in South Texas, but the promise of building a future far from the ghosts of Yellowstone quickly collides with brutal new realities and a rival ranch that will stop at nothing to protect its empire.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/watch/tv/299167">▶ &nbsp;Watch Now</a>
+            <a class="btn btn-icon" href="/watch/tv/299167" title="Info">ℹ</a>
+          </div>
+        </div>
+      </div>
+    </div><div class="hero-slide " data-slide="2" style="background-image:url('https://image.tmdb.org/t/p/w1280/tsRy63Mu5cu8etL1X7ZLyf7UP1M.jpg')">
+      <div class="hero-content">
+        <div class="hero-content-inner">
+          <div class="hero-badge">Now Streaming</div>
+          <h1 class="hero-title">Breaking Bad</h1>
+          <div class="hero-tags"><span class="year">2008</span><span class="rating"><span class="star">★</span> 8.9</span><span class="studio">TV SERIES</span></div>
+          <p class="hero-desc">Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer and given a prognosis of only two years left to live. He becomes filled with a sense of fearlessness and an unrelenting desire to secure his family's financial future at any cost as he enters the dangerous world of drugs and crime.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/watch/tv/1396">▶ &nbsp;Watch Now</a>
+            <a class="btn btn-icon" href="/watch/tv/1396" title="Info">ℹ</a>
+          </div>
+        </div>
+      </div>
+    </div><div class="hero-slide " data-slide="3" style="background-image:url('https://image.tmdb.org/t/p/w1280/TGJ34SvYJ2ZgzsOgAaXzSx3o7E.jpg')">
+      <div class="hero-content">
+        <div class="hero-content-inner">
+          <div class="hero-badge">Now Streaming</div>
+          <h1 class="hero-title">Off Campus</h1>
+          <div class="hero-tags"><span class="year">2026</span><span class="rating"><span class="star">★</span> 8.9</span><span class="studio">TV SERIES</span></div>
+          <p class="hero-desc">Hannah Wells tutors hockey captain Garrett Graham to win over her crush. Their deal becomes real connection as they face their pasts. Friends Logan, Dean, Tucker, and Allie navigate college life and love.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/watch/tv/273240">▶ &nbsp;Watch Now</a>
+            <a class="btn btn-icon" href="/watch/tv/273240" title="Info">ℹ</a>
+          </div>
+        </div>
+      </div>
+    </div><div class="hero-slide " data-slide="4" style="background-image:url('https://image.tmdb.org/t/p/w1280/zMwhWailP1WY7sb6AoE6b8ugoy.jpg')">
+      <div class="hero-content">
+        <div class="hero-content-inner">
+          <div class="hero-badge">Now Streaming</div>
+          <h1 class="hero-title">Swapped</h1>
+          <div class="hero-tags"><span class="year">2026</span><span class="rating"><span class="star">★</span> 8.9</span><span class="studio">MOVIE</span></div>
+          <p class="hero-desc">A small woodland creature and a majestic bird, two natural sworn enemies of the Valley, magically trade places and set off on an adventure of a lifetime to switch back. Their journey soon uncovers a greater threat—one that could endanger not only their species, but the entire valley they call home.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/watch/movie/1007757">▶ &nbsp;Watch Now</a>
+            <a class="btn btn-icon" href="/watch/movie/1007757" title="Info">ℹ</a>
+          </div>
+        </div>
+      </div>
+    </div><div class="hero-slide " data-slide="5" style="background-image:url('https://image.tmdb.org/t/p/w1280/rBOnrVlck7BIlGeWVlzYiZeg4l2.jpg')">
+      <div class="hero-content">
+        <div class="hero-content-inner">
+          <div class="hero-badge">Now Streaming</div>
+          <h1 class="hero-title">Frieren: Beyond Journey&amp;#039;s End</h1>
+          <div class="hero-tags"><span class="year">2023</span><span class="rating"><span class="star">★</span> 8.8</span><span class="studio">TV SERIES</span></div>
+          <p class="hero-desc">After the party of heroes defeated the Demon King, they restored peace to the land and returned to lives of solitude.  Generations pass, and the elven mage Frieren comes face to face with humanity’s mortality. She takes on a new apprentice and promises to fulfill old friends’ dying wishes. Can an elven mind make peace with the nature of life and death? Frieren embarks on her quest to find out.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/watch/tv/209867">▶ &nbsp;Watch Now</a>
+            <a class="btn btn-icon" href="/watch/tv/209867" title="Info">ℹ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-dots"><span class="active" data-dot="0"></span><span class="" data-dot="1"></span><span class="" data-dot="2"></span><span class="" data-dot="3"></span><span class="" data-dot="4"></span><span class="" data-dot="5"></span></div>
+  </section><div class="rows"><section class="row-section" data-key="top">
+    <div class="row-head">
+      <h2>Top Rated</h2>
+      <div class="row-nav">
+        <button data-scroll="-1" aria-label="Previous">‹</button>
+        <button data-scroll="1" aria-label="Next">›</button>
+      </div>
+    </div>
+    <div class="row-track-wrap"><div class="row-track"><a class="card" href="/watch/tv/276161" data-id="276161" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/fMECSPrTmRClSViMsXFYmiYIcWP.jpg" alt="Teach You a Lesson" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(123, 70%, 28%), hsl(193, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">Teach You a Lesson</div>
+        <div class="card-meta"><span class="imdb-chip">IMDb 9.4</span><span>2026</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/299167" data-id="299167" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/xsiecCxd8lkcAluw0wWwbW5CwSv.jpg" alt="Dutton Ranch" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(52, 70%, 28%), hsl(122, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">Dutton Ranch</div>
+        <div class="card-meta"><span class="imdb-chip">IMDb 9.2</span><span>2026</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/1396" data-id="1396" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/anFx9aTOOYqgS3v7x3R84Kz67ly.jpg" alt="Breaking Bad" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(48, 70%, 28%), hsl(118, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">Breaking Bad</div>
+        <div class="card-meta"><span class="imdb-chip">IMDb 8.9</span><span>2008</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/273240" data-id="273240" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/tcPc5ZMBO4y2BtCJMe3o2nwZb2B.jpg" alt="Off Campus" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(272, 70%, 28%), hsl(342, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">Off Campus</div>
+        <div class="card-meta"><span class="imdb-chip">IMDb 8.9</span><span>2026</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/movie/1007757" data-id="1007757" data-type="movie">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/tHhxWxge06goXU6ZQH1hj7vK8Hd.jpg" alt="Swapped" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(4, 70%, 28%), hsl(74, 75%, 14%))'">
+      <div class="card-type-badge">Movie</div>
+      <div class="card-overlay">
+        <div class="card-name">Swapped</div>
+        <div class="card-meta"><span class="imdb-chip">IMDb 8.9</span><span>2026</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/209867" data-id="209867" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/dqZENchTd7lp5zht7BdlqM7RBhD.jpg" alt="Frieren: Beyond Journey&amp;#039;s End" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(28, 70%, 28%), hsl(98, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">Frieren: Beyond Journey&amp;#039;s End</div>
+        <div class="card-meta"><span class="imdb-chip">IMDb 8.8</span><span>2023</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/85077" data-id="85077" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/dqVUFuNrMFWt7uGNWlpo91VKYOI.jpg" alt="The Chosen" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(89, 70%, 28%), hsl(159, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">The Chosen</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/219246" data-id="219246" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/1VC3sEFxYXYDqQUCAnvWfUsYg1s.jpg" alt="When Life Gives You Tangerines" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(291, 70%, 28%), hsl(1, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">When Life Gives You Tangerines</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/246" data-id="246" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/yaGt4GIutpbXHsv48tWceWg6s56.jpg" alt="Avatar: The Last Airbender" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(172, 70%, 28%), hsl(242, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">Avatar: The Last Airbender</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/94605" data-id="94605" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/fqldf2t8ztc9aiwn3k6mlX3tvRT.jpg" alt="Arcane" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(286, 70%, 28%), hsl(356, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">Arcane</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/301507" data-id="301507" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/3YCKbtAkYWCMDLHvkUjGhG7eWoS.jpg" alt="Heated Rivalry" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(104, 70%, 28%), hsl(174, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">Heated Rivalry</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/37854" data-id="37854" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/dB4EDhre2dsC2kxYDavyKWqLQwi.jpg" alt="One Piece" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(148, 70%, 28%), hsl(218, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">One Piece</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/250307" data-id="250307" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/kvFSpESyBZMjaeOJDx7RS3P1jey.jpg" alt="The Pitt" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(168, 70%, 28%), hsl(238, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">The Pitt</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/movie/278" data-id="278" data-type="movie">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg" alt="The Shawshank Redemption" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(116, 70%, 28%), hsl(186, 75%, 14%))'">
+      <div class="card-type-badge">Movie</div>
+      <div class="card-overlay">
+        <div class="card-name">The Shawshank Redemption</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/87108" data-id="87108" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/hlLXt2tOPT6RRnjiUmoxyG1LTFi.jpg" alt="Chernobyl" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(274, 70%, 28%), hsl(344, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">Chernobyl</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/31911" data-id="31911" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/5ZFUEOULaVml7pQuXxhpR2SmVUw.jpg" alt="Fullmetal Alchemist: Brotherhood" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(100, 70%, 28%), hsl(170, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">Fullmetal Alchemist: Brotherhood</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a></div></div>
+  </section><section class="row-section" data-key="movies">
+    <div class="row-head">
+      <h2>Movies</h2>
+      <div class="row-nav">
+        <button data-scroll="-1" aria-label="Previous">‹</button>
+        <button data-scroll="1" aria-label="Next">›</button>
+      </div>
+    </div>
+    <div class="row-track-wrap"><div class="row-track"><a class="card" href="/watch/movie/969681" data-id="969681" data-type="movie">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/iPOn6DinuVyLY17YM9mKuPofV08.jpg" alt="Spider-Man: Brand New Day" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(219, 70%, 28%), hsl(289, 75%, 14%))'">
+      <div class="card-type-badge">Movie</div>
+      <div class="card-overlay">
+        <div class="card-name">Spider-Man: Brand New Day</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/movie/1284041" data-id="1284041" data-type="movie">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/tz3Afb8yxSrYmbfHGGRsJ6HvwRO.jpg" alt="The Last House" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(253, 70%, 28%), hsl(323, 75%, 14%))'">
+      <div class="card-type-badge">Movie</div>
+      <div class="card-overlay">
+        <div class="card-name">The Last House</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/movie/1368337" data-id="1368337" data-type="movie">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg" alt="The Odyssey" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(113, 70%, 28%), hsl(183, 75%, 14%))'">
+      <div class="card-type-badge">Movie</div>
+      <div class="card-overlay">
+        <div class="card-name">The Odyssey</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/movie/1339713" data-id="1339713" data-type="movie">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/bRwnj8WEKBCvmfeUNOukJPwB43K.jpg" alt="Obsession" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(139, 70%, 28%), hsl(209, 75%, 14%))'">
+      <div class="card-type-badge">Movie</div>
+      <div class="card-overlay">
+        <div class="card-name">Obsession</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/movie/1212763" data-id="1212763" data-type="movie">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/uRxrNXQWkHoENm3nwVOZDYSCx2F.jpg" alt="Evil Dead Burn" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(7, 70%, 28%), hsl(77, 75%, 14%))'">
+      <div class="card-type-badge">Movie</div>
+      <div class="card-overlay">
+        <div class="card-name">Evil Dead Burn</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/movie/1081003" data-id="1081003" data-type="movie">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/1QCWdqzTfh2x9UylVpspIU6QTuM.jpg" alt="Supergirl" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(207, 70%, 28%), hsl(277, 75%, 14%))'">
+      <div class="card-type-badge">Movie</div>
+      <div class="card-overlay">
+        <div class="card-name">Supergirl</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/movie/1263532" data-id="1263532" data-type="movie">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/mwmfEqWXZG6HmAUuN5SjO8s7UNV.jpg" alt="Beast Race" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(306, 70%, 28%), hsl(16, 75%, 14%))'">
+      <div class="card-type-badge">Movie</div>
+      <div class="card-overlay">
+        <div class="card-name">Beast Race</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/movie/1307118" data-id="1307118" data-type="movie">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/bNErActDctl6cdUGw9pnjSCmyhQ.jpg" alt="Soulm8te" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(231, 70%, 28%), hsl(301, 75%, 14%))'">
+      <div class="card-type-badge">Movie</div>
+      <div class="card-overlay">
+        <div class="card-name">Soulm8te</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/movie/1275779" data-id="1275779" data-type="movie">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/AnJ8IQJI23hNpYXVNaythu061Ru.jpg" alt="Disclosure Day" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(201, 70%, 28%), hsl(271, 75%, 14%))'">
+      <div class="card-type-badge">Movie</div>
+      <div class="card-overlay">
+        <div class="card-name">Disclosure Day</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/movie/1481343" data-id="1481343" data-type="movie">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/lH8k9uCWYn2b2gsYleqYBDPbWa8.jpg" alt="The Devil&amp;#039;s Mouth" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(311, 70%, 28%), hsl(21, 75%, 14%))'">
+      <div class="card-type-badge">Movie</div>
+      <div class="card-overlay">
+        <div class="card-name">The Devil&amp;#039;s Mouth</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/movie/1083381" data-id="1083381" data-type="movie">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/rhGx6E3qRNMgj3i5su2oukNHwIQ.jpg" alt="Backrooms" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(209, 70%, 28%), hsl(279, 75%, 14%))'">
+      <div class="card-type-badge">Movie</div>
+      <div class="card-overlay">
+        <div class="card-name">Backrooms</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/movie/980431" data-id="980431" data-type="movie">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/3sgnSfNT27Bx5O5ukr7B26mhEQq.jpg" alt="Avatar Aang: The Last Airbender" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(219, 70%, 28%), hsl(289, 75%, 14%))'">
+      <div class="card-type-badge">Movie</div>
+      <div class="card-overlay">
+        <div class="card-name">Avatar Aang: The Last Airbender</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/movie/454639" data-id="454639" data-type="movie">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/oRuyGUHdoaQxWP3SDfafGkStxTC.jpg" alt="Masters of the Universe" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(294, 70%, 28%), hsl(4, 75%, 14%))'">
+      <div class="card-type-badge">Movie</div>
+      <div class="card-overlay">
+        <div class="card-name">Masters of the Universe</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/movie/936075" data-id="936075" data-type="movie">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/zm0KAbOjlt9eR5y7vDiL2dEOwMl.jpg" alt="Michael" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(271, 70%, 28%), hsl(341, 75%, 14%))'">
+      <div class="card-type-badge">Movie</div>
+      <div class="card-overlay">
+        <div class="card-name">Michael</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/movie/1564614" data-id="1564614" data-type="movie">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/gnAsZvBygplNpp8PtjoTEYv3VPB.jpg" alt="Leviticus" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(232, 70%, 28%), hsl(302, 75%, 14%))'">
+      <div class="card-type-badge">Movie</div>
+      <div class="card-overlay">
+        <div class="card-name">Leviticus</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/movie/1284465" data-id="1284465" data-type="movie">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/92Tsfx7SFafOqWsotvrlJbHyehd.jpg" alt="The Death of Robin Hood" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(216, 70%, 28%), hsl(286, 75%, 14%))'">
+      <div class="card-type-badge">Movie</div>
+      <div class="card-overlay">
+        <div class="card-name">The Death of Robin Hood</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/movie/687163" data-id="687163" data-type="movie">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/yihdXomYb5kTeSivtFndMy5iDmf.jpg" alt="Project Hail Mary" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(352, 70%, 28%), hsl(62, 75%, 14%))'">
+      <div class="card-type-badge">Movie</div>
+      <div class="card-overlay">
+        <div class="card-name">Project Hail Mary</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/movie/1314481" data-id="1314481" data-type="movie">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/xTI42pmsP5EDnvsNJPEDubwWBQO.jpg" alt="The Devil Wears Prada 2" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(259, 70%, 28%), hsl(329, 75%, 14%))'">
+      <div class="card-type-badge">Movie</div>
+      <div class="card-overlay">
+        <div class="card-name">The Devil Wears Prada 2</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/movie/1101383" data-id="1101383" data-type="movie">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/3SifFCwwFzXdU1Ew0nA4Z92Bs15.jpg" alt="The End of Oak Street" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(143, 70%, 28%), hsl(213, 75%, 14%))'">
+      <div class="card-type-badge">Movie</div>
+      <div class="card-overlay">
+        <div class="card-name">The End of Oak Street</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/movie/1108427" data-id="1108427" data-type="movie">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/zKVgiv5qHCvCLT4A2ymJi5QeXDH.jpg" alt="Moana" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(42, 70%, 28%), hsl(112, 75%, 14%))'">
+      <div class="card-type-badge">Movie</div>
+      <div class="card-overlay">
+        <div class="card-name">Moana</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/movie/1003596" data-id="1003596" data-type="movie">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/cWXtJhrlruF8CeYuaBGE8vdj3Q9.jpg" alt="Avengers: Doomsday" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(309, 70%, 28%), hsl(19, 75%, 14%))'">
+      <div class="card-type-badge">Movie</div>
+      <div class="card-overlay">
+        <div class="card-name">Avengers: Doomsday</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/movie/1108427" data-id="1108427" data-type="movie">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/zKVgiv5qHCvCLT4A2ymJi5QeXDH.jpg" alt="Moana" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(42, 70%, 28%), hsl(112, 75%, 14%))'">
+      <div class="card-type-badge">Movie</div>
+      <div class="card-overlay">
+        <div class="card-name">Moana</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a></div></div>
+  </section><section class="row-section" data-key="tv">
+    <div class="row-head">
+      <h2>TV Series</h2>
+      <div class="row-nav">
+        <button data-scroll="-1" aria-label="Previous">‹</button>
+        <button data-scroll="1" aria-label="Next">›</button>
+      </div>
+    </div>
+    <div class="row-track-wrap"><div class="row-track"><a class="card" href="/watch/tv/615" data-id="615" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/eM8bbTn8C8vUwwS6upzzm7gX31u.jpg" alt="Futurama" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(267, 70%, 28%), hsl(337, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">Futurama</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/97546" data-id="97546" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/uRHsiw1wLxPHFXkkv4Ix1s0O6f4.jpg" alt="Ted Lasso" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(141, 70%, 28%), hsl(211, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">Ted Lasso</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/94997" data-id="94997" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/7V0Ebks0GgpKvQ7QbLAIdX5dos4.jpg" alt="House of the Dragon" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(99, 70%, 28%), hsl(169, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">House of the Dragon</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/125988" data-id="125988" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/gMYZZvnkVNTqSVnVCphWbPXwWwb.jpg" alt="Silo" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(137, 70%, 28%), hsl(207, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">Silo</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/113962" data-id="113962" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/rzpHPSEgPTpRs8EHbygwsOw7jC0.jpg" alt="Lioness" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(73, 70%, 28%), hsl(143, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">Lioness</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/271016" data-id="271016" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/Q9u5ZSrthOuwkULV41VUqE8vRV.jpg" alt="Mystic Nine" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(99, 70%, 28%), hsl(169, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">Mystic Nine</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/298168" data-id="298168" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/wP0GdqwVu2g1y3q1KzBXuSrdTvX.jpg" alt="The Shards" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(244, 70%, 28%), hsl(314, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">The Shards</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/289324" data-id="289324" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/AthqHRKJFOIbLa459I3D5yHdrQL.jpg" alt="Star Wars: Visions Presents - The Ninth Jedi" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(151, 70%, 28%), hsl(221, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">Star Wars: Visions Presents - The Ninth Jedi</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/30984" data-id="30984" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/2EewmxXe72ogD0EaWM8gqa0ccIw.jpg" alt="Bleach" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(275, 70%, 28%), hsl(345, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">Bleach</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/125909" data-id="125909" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/zCHmmoqtLsIsou866osiWtIWmoA.jpg" alt="Batman: Caped Crusader" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(39, 70%, 28%), hsl(109, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">Batman: Caped Crusader</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/37854" data-id="37854" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/dB4EDhre2dsC2kxYDavyKWqLQwi.jpg" alt="One Piece" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(148, 70%, 28%), hsl(218, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">One Piece</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/278624" data-id="278624" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/xsrkiXg8EuNNtbPtbmvCxg95gK7.jpg" alt="Lucky" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(160, 70%, 28%), hsl(230, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">Lucky</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/283297" data-id="283297" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/cThLWEGs6BEqY0QZMbU4FAeWwPT.jpg" alt="Sterling Point" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(164, 70%, 28%), hsl(234, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">Sterling Point</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/60625" data-id="60625" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/owhkU6KRqdXoUQpjV8uyZGPtX58.jpg" alt="Rick and Morty" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(43, 70%, 28%), hsl(113, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">Rick and Morty</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/207333" data-id="207333" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/9zrvktj9JYQwQxZD4lAySfcYlmI.jpg" alt="One Hundred Years of Solitude" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(182, 70%, 28%), hsl(252, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">One Hundred Years of Solitude</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/287620" data-id="287620" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/vM6B0dqOB2YdXEaA7bjq5LuXEo.jpg" alt="Stuart Fails to Save the Universe" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(214, 70%, 28%), hsl(284, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">Stuart Fails to Save the Universe</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/296206" data-id="296206" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/mxa7YxVln3Rwnd2Va82PoclTznj.jpg" alt="Agent Kim Reactivated" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(210, 70%, 28%), hsl(280, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">Agent Kim Reactivated</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/277439" data-id="277439" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/3ZLy3cfQa9prahoRq1teMmr5pvW.jpg" alt="Cape Fear" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(221, 70%, 28%), hsl(291, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">Cape Fear</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/215072" data-id="215072" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/7yUY1HUyQuybbvkAAhLzQ7x1l9g.jpg" alt="A Shop for Killers" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(334, 70%, 28%), hsl(44, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">A Shop for Killers</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/138502" data-id="138502" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/2HKBc5UiFw8JrruHq8S1Y7TnlW0.jpg" alt="X-Men &amp;#039;97" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(103, 70%, 28%), hsl(173, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">X-Men &amp;#039;97</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/138502" data-id="138502" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/2HKBc5UiFw8JrruHq8S1Y7TnlW0.jpg" alt="X-Men &amp;#039;97" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(103, 70%, 28%), hsl(173, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">X-Men &amp;#039;97</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a><a class="card" href="/watch/tv/125909" data-id="125909" data-type="tv">
+    <div class="card-poster">
+      <img src="https://image.tmdb.org/t/p/w342/zCHmmoqtLsIsou866osiWtIWmoA.jpg" alt="Batman: Caped Crusader" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, hsl(39, 70%, 28%), hsl(109, 75%, 14%))'">
+      <div class="card-type-badge">Series</div>
+      <div class="card-overlay">
+        <div class="card-name">Batman: Caped Crusader</div>
+        <div class="card-meta"><span>HD</span><span>▶</span></div>
+      </div>
+    </div>
+  </a></div></div>
+  </section></div></main>
+
+<footer>
+  CineHall — streaming movies &amp; TV series. All content is provided by third-party sources.
+</footer>
+
+<script src="/app.js"></script>
+
+
+</body></html>

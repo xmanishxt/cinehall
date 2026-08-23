@@ -1,0 +1,56 @@
+#!/bin/bash
+# batch probe streaming-source candidates
+UA="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+M=tt1375666   # Inception
+T=tt0903747   # Breaking Bad
+pand() {
+  curl -sS -m 9 -A "$UA" -L -o probe/_o -w "%{http_code}|%{size_download}|%{content_type}" "$2" 2>/dev/null > probe/_s
+  local code; code=$(cat probe/_s)
+  local body; body=$(head -c 160 probe/_o | tr '\n' ' ')
+  echo "== $1"
+  echo "   -> $code"
+  echo "   $body"
+  echo
+}
+pand "M01 2embed.cc (control)"       "https://www.2embed.cc/embed/$M"
+pand "M02 embed.su"                  "https://embed.su/embed/movie/$M"
+pand "M03 vidsrc.to"                 "https://vidsrc.to/embed/movie/$M"
+pand "M04 vidsrc.me"                 "https://vidsrc.me/embed/movie/$M"
+pand "M05 vidsrc.host"               "https://vidsrc.host/embed/movie/$M"
+pand "M06 vidsrc.icu"                "https://vidsrc.icu/embed/movie/$M"
+pand "M07 vidsrc.net"                "https://vidsrc.net/embed/movie/$M"
+pand "M08 vidsrc.xyz"                "https://vidsrc.xyz/embed/movie/$M"
+pand "M09 vidbinge"                  "https://embed.vidbinge.com/embed/movie/$M"
+pand "M10 multiembed.mov"            "https://multiembed.mov/"
+pand "M11 multiembed directstream"   "https://multiembed.mov/directstream.php?video_id=$M"
+pand "M12 autoembed.cc"              "https://autoembed.cc/embed/movie/$M"
+pand "M13 embed-wish"                "https://embed-wish.com/embed/movie/$M"
+pand "M14 flixembed"                 "https://flixembed.cc/embed/movie/$M"
+pand "M15 embed.mov.online"          "https://embed.mov.online/embed/$M"
+pand "M16 videoff"                   "https://www.videoff.xyz/embed/$M"
+pand "M17 mvapi"                     "https://www.mvapi.com/movie/$M"
+pand "M18 gdriveplayer db"           "https://database.gdriveplayer.us/player.php?imdb=$M"
+pand "M19 gdriveplayer api"          "https://gdriveplayer.us/api.php"
+pand "M20 osmembed"                  "https://osmembed.com/movie/$M"
+pand "M21 rbvidz"                    "https://rbvidz.com/player/movie/$M"
+pand "M22 pnembed"                   "https://www.pnembed.com/embed/movie/$M"
+pand "M23 vidsrc.ws"                 "https://vidsrc.ws/embed/movie/$M"
+pand "M24 movie-web"                 "https://movie-web.app/"
+pand "M25 flixtv api"                "https://apif.flixhq.cf/"
+pand "M26 consumet"                  "https://api.consumet.org/"
+pand "M27 consumet flixhq"           "https://api.consumet.org/movies/flixhq/trending"
+pand "M28 consumet movies"           "https://api.consumet.org/movies"
+pand "M29 embedder.one"              "https://embedder.one/e/$M"
+pand "M30 hoesflix"                  "https://hoesflix.xyz/embed/movie/$M"
+pand "M31 mov.online"                "https://www.mov.online/"
+pand "M32 vidlink"                "https://vidlink.pro/embed/movie/$M"
+pand "T01 2embed tv (control)"       "https://www.2embed.cc/embedtv/$T-1-1"
+pand "T02 vidsrc.me tv"              "https://vidsrc.me/embed/tv/$T/1/1"
+pand "T03 vidsrc.host tv"            "https://vidsrc.host/embed/tv/$T/1/1"
+pand "T04 vidsrc.to tv"              "https://vidsrc.to/embed/tv/$T/1/1"
+pand "T05 embed.su tv"               "https://embed.su/embed/tv/$T/1/1"
+pand "T06 autoembed.cc tv"           "https://autoembed.cc/embed/tv/$T/1/1"
+pand "T07 embedwish tv"              "https://embed-wish.com/embed/tv/$T/1/1"
+pand "T08 vidlink tv"                "https://vidlink.provider/tv/$T/1/1"
+pand "T09 mov.online tv"            "https://embed.mov.online/tv/$T/1/1"
+pand "T10 multiembed tv"             "https://multiembed.mov/directstream.php?video_id=$T"

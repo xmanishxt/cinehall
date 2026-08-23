@@ -1,0 +1,1 @@
+{"error":"Error","message":"vsrc edge request failed: 404","stack":"at processTicksAndRejections (node:internal/process/task_queues:95:5). at async scrapeVsrc (/app/src/routes/vsrc/index.ts:174:21). at async Vsrc.loadSourcesByTitle (/app/src/routes/vsrc/index.ts:258:20)","statusCode":500}

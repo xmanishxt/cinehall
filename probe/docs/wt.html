@@ -1,0 +1,913 @@
+<!doctype html>
+<html lang="en" data-theme="night" class="scroll-smooth">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Free Online Torrent Website — Stream &amp; Download in Browser | Webtor.io</title>
+        
+    <meta name="description" content="Free online torrent website to stream and download torrents right in your browser — no app, no client, no install. Magnet download and .torrent files supported. Open-source and private.">
+
+        
+    <link rel="canonical" href="https://webtor.io/">
+
+        <link rel="alternate" hreflang="en" href="https://webtor.io/">
+        <link rel="alternate" hreflang="cs" href="https://webtor.io/cs/">
+        <link rel="alternate" hreflang="de" href="https://webtor.io/de/">
+        <link rel="alternate" hreflang="es" href="https://webtor.io/es/">
+        <link rel="alternate" hreflang="fr" href="https://webtor.io/fr/">
+        <link rel="alternate" hreflang="it" href="https://webtor.io/it/">
+        <link rel="alternate" hreflang="nl" href="https://webtor.io/nl/">
+        <link rel="alternate" hreflang="pl" href="https://webtor.io/pl/">
+        <link rel="alternate" hreflang="pt" href="https://webtor.io/pt/">
+        <link rel="alternate" hreflang="ru" href="https://webtor.io/ru/">
+        <link rel="alternate" hreflang="tr" href="https://webtor.io/tr/">
+        <link rel="alternate" hreflang="x-default" href="https://webtor.io/">
+        
+        
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Webtor.io">
+    
+    
+    <meta property="og:title" content="Webtor.io — Stream &amp; Download Torrents in Browser">
+    <meta property="og:description" content="Stream and download any torrent right in your browser — free, open-source, no app to install. Your private web torrent player, on any device.">
+    <meta property="og:url" content="https://webtor.io/">
+    
+    
+    <meta property="og:image" content="https://webtor.io/assets/night/favicon.svg">
+
+        <meta name="twitter:card" content="summary">
+        <link rel="shortcut icon" href="/favicon.ico">
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" >
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+        <link rel="manifest" href="/manifest.webmanifest">
+        <link href="/assets/inter.css?a3b1225680a1781e9cea46392c46556a" rel="stylesheet"/>
+        <link href="/assets/comfortaa.css?19e8677e7e34893c5a863e9233bc09dd" rel="stylesheet"/>
+        <script>
+            window._CSRF = "z-QW3JVuSEeAUZ3jMXX63GSrHOQ=";
+            window._sessionID = "MHWH7XLITA374SMS2D6ALW35Y5UZ2GBTOBHDTBPVYLY2DYPP7ABA";
+            window._domain = "https:\/\/webtor.io";
+            window._showAdult = false;
+            window._umami = {"website_id":"76c80a8c-0ecd-418c-9e1c-09d5fff43271","host_url":"https://umami.webtor.io"};
+        </script>
+        <link href="/assets/style.css?28bc138122e540a352e1de3520b0a136" rel="stylesheet"/>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Webtor",
+        "description": "Free web-based torrent player to stream and download torrents directly in your browser, no software required.",
+        "url": "https:\/\/webtor.io\/",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+    
+
+    </head>
+    <body class="flex flex-col min-h-screen font-sans antialiased">
+        <script>
+            
+            
+            
+            
+            (function () {
+                document.body.style.display = 'none';
+                var show = function () { document.body.style.display = ''; };
+                window.addEventListener('load', show);
+                setTimeout(show, 5000);
+            })();
+        </script>
+        <progress id="progress" class="progress fixed progress-accent h-1 z-toast"></progress>
+        <header>
+            <nav data-async-layout="{{ template &#34;nav&#34; . }}">
+<script>
+    window._tier = "free";
+    window._isNewUser =  false ;
+    window._userId = null;
+    window._tierUpdated =  false ;
+    window._sessionID = "MHWH7XLITA374SMS2D6ALW35Y5UZ2GBTOBHDTBPVYLY2DYPP7ABA";
+</script>
+<div class="navbar navbar-redesign fixed top-0 inset-x-0 z-navbar backdrop-blur-xl border-b border-w-line px-2 min-[400px]:px-3 sm:px-6 h-[72px]">
+    <div class="navbar-start">
+        <a href="/" data-async-target="main" class="font-logo text-[1.6rem] font-light tracking-tight normal-case no-underline">
+            web<span class="text-w-pink">tor</span>
+        </a>
+    </div>
+    
+        <div class="navbar-center hidden xl:flex">
+        <ul class="menu menu-horizontal px-1 gap-1 text-sm font-medium">
+            <li><a href="#how" class="text-w-sub hover:text-base-content transition-colors">How it works</a></li>
+            <li><a href="#features" class="text-w-sub hover:text-base-content transition-colors">Features</a></li>
+            <li><a href="#faq" class="text-w-sub hover:text-base-content transition-colors">FAQ</a></li>
+            <li><a href="https://blog.webtor.io/en/post/" target="_blank" class="text-w-sub hover:text-base-content transition-colors">Blog</a></li>
+        </ul>
+    </div>
+    
+    <div class="navbar-end gap-0.5 min-[400px]:gap-1 sm:gap-2">
+        <div class="dropdown dropdown-end">
+            <label tabindex="0" class="btn btn-ghost btn-sm border border-w-line text-w-sub hover:border-w-cyan hover:text-base-content cursor-pointer uppercase text-xs tracking-wide px-2 sm:px-3" aria-label="Language">
+                en
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-3"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </label>
+            <ul tabindex="0" class="dropdown-content menu bg-base-200 border border-w-line rounded-box z-[1] w-36 p-2 shadow-lg mt-2">
+                
+                <li><a href="/?lang=en" data-async-target="main" data-lang="en" data-umami-event="lang-switch" data-umami-event-to="en" data-umami-event-from="en" class="font-bold text-w-pink">English</a></li>
+                
+                <li><a href="/cs/" data-async-target="main" data-lang="cs" data-umami-event="lang-switch" data-umami-event-to="cs" data-umami-event-from="en" class="text-w-sub hover:text-base-content">Čeština</a></li>
+                
+                <li><a href="/de/" data-async-target="main" data-lang="de" data-umami-event="lang-switch" data-umami-event-to="de" data-umami-event-from="en" class="text-w-sub hover:text-base-content">Deutsch</a></li>
+                
+                <li><a href="/es/" data-async-target="main" data-lang="es" data-umami-event="lang-switch" data-umami-event-to="es" data-umami-event-from="en" class="text-w-sub hover:text-base-content">Español</a></li>
+                
+                <li><a href="/fr/" data-async-target="main" data-lang="fr" data-umami-event="lang-switch" data-umami-event-to="fr" data-umami-event-from="en" class="text-w-sub hover:text-base-content">Français</a></li>
+                
+                <li><a href="/it/" data-async-target="main" data-lang="it" data-umami-event="lang-switch" data-umami-event-to="it" data-umami-event-from="en" class="text-w-sub hover:text-base-content">Italiano</a></li>
+                
+                <li><a href="/nl/" data-async-target="main" data-lang="nl" data-umami-event="lang-switch" data-umami-event-to="nl" data-umami-event-from="en" class="text-w-sub hover:text-base-content">Nederlands</a></li>
+                
+                <li><a href="/pl/" data-async-target="main" data-lang="pl" data-umami-event="lang-switch" data-umami-event-to="pl" data-umami-event-from="en" class="text-w-sub hover:text-base-content">Polski</a></li>
+                
+                <li><a href="/pt/" data-async-target="main" data-lang="pt" data-umami-event="lang-switch" data-umami-event-to="pt" data-umami-event-from="en" class="text-w-sub hover:text-base-content">Português</a></li>
+                
+                <li><a href="/ru/" data-async-target="main" data-lang="ru" data-umami-event="lang-switch" data-umami-event-to="ru" data-umami-event-from="en" class="text-w-sub hover:text-base-content">Русский</a></li>
+                
+                <li><a href="/tr/" data-async-target="main" data-lang="tr" data-umami-event="lang-switch" data-umami-event-to="tr" data-umami-event-from="en" class="text-w-sub hover:text-base-content">Türkçe</a></li>
+                
+            </ul>
+        </div>
+        
+        
+        
+        <div class="join">
+            
+            <a class="btn btn-ghost btn-sm border border-w-line text-w-sub hover:border-w-pink hover:text-base-content join-item px-2 sm:px-3" href="/login" data-async-target="main">Login</a>
+            
+            <a class="btn btn-sm btn-pink join-item capitalize px-2 sm:px-3" href="/donate" data-async-target="main" data-umami-event="donate" aria-label="Donate">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+                <span class="hidden lg:inline-block max-w-[120px] truncate align-middle">
+                
+                    Donate
+                
+                </span>
+            </a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" async src="/assets/nav.js?6518e3e6d0b6238aa0a90736730213cc"></script>
+</nav>
+        </header>
+        <div id="wrapper" class="flex flex-col w-full items-center flex-1">
+            <main id="main" class="w-full" data-async-scroll-top data-async-layout="{{ template &#34;main&#34; . }}" data-async-update-title="{{ template &#34;title&#34; . }} | Webtor.io" data-async-update-description="{{ block &#34;description&#34; . }}{{ end }}" data-async-update-nav="{{ template &#34;nav&#34; . }}" data-async-update-footer="{{ template &#34;footer&#34; . }}" data-async-update-lang="{{ $.Lang }}">
+            
+
+
+<section class="flex flex-col items-center text-center relative overflow-hidden pt-[120px] pb-16 px-3 sm:px-6">
+    <div class="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] hero-glow pointer-events-none"></div>
+
+    
+    <div class="font-logo text-[clamp(4rem,10vw,6.5rem)] font-light tracking-tight leading-none mb-7 relative z-10">
+        <a href="/" data-async-target="main" class="no-underline">
+            web<span class="text-w-pink">tor</span>
+        </a>
+    </div>
+
+    
+    
+    <div class="badge badge-lg bg-w-pink/10 border-w-pink/30 text-w-pinkL gap-2 py-3 px-5 mb-8 relative z-10 text-sm font-medium max-sm:text-xs max-sm:py-2 max-sm:px-3 max-sm:h-auto max-sm:whitespace-normal">
+        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        Open-source · No install needed
+    </div>
+
+    <div class="relative w-full flex flex-col items-center">
+        
+<div class="hero-wave" aria-hidden="true">
+    <svg class="wave-a" viewBox="0 0 2880 240" preserveAspectRatio="none" fill="none">
+        <defs>
+            <linearGradient id="hero-wave-grad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#e84393"/>
+                <stop offset="0.5" stop-color="#a29bfe"/>
+                <stop offset="1" stop-color="#00cec9"/>
+            </linearGradient>
+        </defs>
+        <path d="M0 120 C60 74 120 74 180 120 S300 166 360 120 S480 74 540 120 S660 166 720 120 S840 74 900 120 S1020 166 1080 120 S1200 74 1260 120 S1380 166 1440 120 S1560 74 1620 120 S1740 166 1800 120 S1920 74 1980 120 S2100 166 2160 120 S2280 74 2340 120 S2460 166 2520 120 S2640 74 2700 120 S2820 166 2880 120" stroke="url(#hero-wave-grad)" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+    </svg>
+    <svg class="wave-b" viewBox="0 0 2880 240" preserveAspectRatio="none" fill="none">
+        <path d="M0 120 C60 74 120 74 180 120 S300 166 360 120 S480 74 540 120 S660 166 720 120 S840 74 900 120 S1020 166 1080 120 S1200 74 1260 120 S1380 166 1440 120 S1560 74 1620 120 S1740 166 1800 120 S1920 74 1980 120 S2100 166 2160 120 S2280 74 2340 120 S2460 166 2520 120 S2640 74 2700 120 S2820 166 2880 120" stroke="#6c5ce7" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+    </svg>
+    <svg class="wave-c" viewBox="0 0 2880 240" preserveAspectRatio="none" fill="none">
+        <path d="M0 120 C60 74 120 74 180 120 S300 166 360 120 S480 74 540 120 S660 166 720 120 S840 74 900 120 S1020 166 1080 120 S1200 74 1260 120 S1380 166 1440 120 S1560 74 1620 120 S1740 166 1800 120 S1920 74 1980 120 S2100 166 2160 120 S2280 74 2340 120 S2460 166 2520 120 S2640 74 2700 120 S2820 166 2880 120" stroke="#00cec9" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+    </svg>
+    
+    <div class="hero-particles">
+        <div class="hero-particles-track particles-far">
+            
+
+<div class="hero-particle-field">
+    <i style="--x:5%;--y:60%;--s:2px;--o:0.24;--c:162 155 254"></i>
+    <i style="--x:10%;--y:79%;--s:1px;--o:0.23;--c:0 206 201"></i>
+    <i style="--x:16%;--y:88%;--s:2px;--o:0.16;--c:0 206 201"></i>
+    <i style="--x:20%;--y:32%;--s:2px;--o:0.22;--c:0 206 201"></i>
+    <i style="--x:23%;--y:57%;--s:2px;--o:0.26;--c:0 206 201"></i>
+    <i style="--x:27%;--y:41%;--s:1px;--o:0.17;--c:232 67 147"></i>
+    <i style="--x:33%;--y:65%;--s:2px;--o:0.15;--c:0 206 201"></i>
+    <i style="--x:37%;--y:36%;--s:1px;--o:0.19;--c:162 155 254"></i>
+    <i style="--x:44%;--y:75%;--s:2px;--o:0.25;--c:162 155 254"></i>
+    <i style="--x:48%;--y:20%;--s:1px;--o:0.14;--c:0 206 201"></i>
+    <i style="--x:53%;--y:83%;--s:2px;--o:0.20;--c:162 155 254"></i>
+    <i style="--x:56%;--y:71%;--s:1px;--o:0.15;--c:162 155 254"></i>
+    <i style="--x:62%;--y:67%;--s:2px;--o:0.25;--c:162 155 254"></i>
+    <i style="--x:66%;--y:17%;--s:2px;--o:0.20;--c:0 206 201"></i>
+    <i style="--x:71%;--y:13%;--s:1px;--o:0.21;--c:162 155 254"></i>
+    <i style="--x:76%;--y:29%;--s:1px;--o:0.23;--c:162 155 254"></i>
+    <i style="--x:82%;--y:53%;--s:1px;--o:0.19;--c:0 206 201"></i>
+    <i style="--x:86%;--y:49%;--s:1px;--o:0.16;--c:0 206 201"></i>
+    <i style="--x:90%;--y:44%;--s:2px;--o:0.19;--c:0 206 201"></i>
+    <i style="--x:95%;--y:25%;--s:2px;--o:0.22;--c:162 155 254"></i>
+</div>
+
+            
+
+<div class="hero-particle-field">
+    <i style="--x:5%;--y:60%;--s:2px;--o:0.24;--c:162 155 254"></i>
+    <i style="--x:10%;--y:79%;--s:1px;--o:0.23;--c:0 206 201"></i>
+    <i style="--x:16%;--y:88%;--s:2px;--o:0.16;--c:0 206 201"></i>
+    <i style="--x:20%;--y:32%;--s:2px;--o:0.22;--c:0 206 201"></i>
+    <i style="--x:23%;--y:57%;--s:2px;--o:0.26;--c:0 206 201"></i>
+    <i style="--x:27%;--y:41%;--s:1px;--o:0.17;--c:232 67 147"></i>
+    <i style="--x:33%;--y:65%;--s:2px;--o:0.15;--c:0 206 201"></i>
+    <i style="--x:37%;--y:36%;--s:1px;--o:0.19;--c:162 155 254"></i>
+    <i style="--x:44%;--y:75%;--s:2px;--o:0.25;--c:162 155 254"></i>
+    <i style="--x:48%;--y:20%;--s:1px;--o:0.14;--c:0 206 201"></i>
+    <i style="--x:53%;--y:83%;--s:2px;--o:0.20;--c:162 155 254"></i>
+    <i style="--x:56%;--y:71%;--s:1px;--o:0.15;--c:162 155 254"></i>
+    <i style="--x:62%;--y:67%;--s:2px;--o:0.25;--c:162 155 254"></i>
+    <i style="--x:66%;--y:17%;--s:2px;--o:0.20;--c:0 206 201"></i>
+    <i style="--x:71%;--y:13%;--s:1px;--o:0.21;--c:162 155 254"></i>
+    <i style="--x:76%;--y:29%;--s:1px;--o:0.23;--c:162 155 254"></i>
+    <i style="--x:82%;--y:53%;--s:1px;--o:0.19;--c:0 206 201"></i>
+    <i style="--x:86%;--y:49%;--s:1px;--o:0.16;--c:0 206 201"></i>
+    <i style="--x:90%;--y:44%;--s:2px;--o:0.19;--c:0 206 201"></i>
+    <i style="--x:95%;--y:25%;--s:2px;--o:0.22;--c:162 155 254"></i>
+</div>
+
+        </div>
+        <div class="hero-particles-track particles-mid">
+            
+
+<div class="hero-particle-field">
+    <i style="--x:6%;--y:37%;--s:2px;--o:0.31;--b:5px;--d:19s;--t:-12s;--c:0 206 201"></i>
+    <i style="--x:14%;--y:46%;--s:3px;--o:0.42;--b:8px;--d:23s;--t:-23s;--c:0 206 201"></i>
+    <i style="--x:19%;--y:75%;--s:3px;--o:0.38;--b:8px;--d:24s;--t:-6s;--c:162 155 254"></i>
+    <i style="--x:26%;--y:65%;--s:2px;--o:0.42;--b:5px;--d:25s;--t:-18s;--c:232 67 147"></i>
+    <i style="--x:31%;--y:26%;--s:3px;--o:0.36;--b:5px;--d:16s;--t:-21s;--c:232 67 147"></i>
+    <i style="--x:41%;--y:30%;--s:2px;--o:0.40;--b:5px;--d:14s;--t:-3s;--c:162 155 254"></i>
+    <i style="--x:45%;--y:58%;--s:3px;--o:0.46;--b:8px;--d:26s;--t:-25s;--c:162 155 254"></i>
+    <i style="--x:55%;--y:18%;--s:3px;--o:0.41;--b:6px;--d:19s;--t:-21s;--c:232 67 147"></i>
+    <i style="--x:63%;--y:87%;--s:2px;--o:0.41;--b:7px;--d:26s;--t:-34s;--c:232 67 147"></i>
+    <i style="--x:69%;--y:54%;--s:3px;--o:0.45;--b:7px;--d:28s;--t:-20s;--c:0 206 201"></i>
+    <i style="--x:75%;--y:82%;--s:3px;--o:0.30;--b:7px;--d:28s;--t:-5s;--c:162 155 254"></i>
+    <i style="--x:81%;--y:72%;--s:3px;--o:0.41;--b:7px;--d:14s;--t:-16s;--c:0 206 201"></i>
+    <i style="--x:90%;--y:41%;--s:2px;--o:0.41;--b:8px;--d:18s;--t:-28s;--c:162 155 254"></i>
+    <i style="--x:95%;--y:12%;--s:2px;--o:0.36;--b:7px;--d:18s;--t:-7s;--c:232 67 147"></i>
+</div>
+
+            
+
+<div class="hero-particle-field">
+    <i style="--x:6%;--y:37%;--s:2px;--o:0.31;--b:5px;--d:19s;--t:-12s;--c:0 206 201"></i>
+    <i style="--x:14%;--y:46%;--s:3px;--o:0.42;--b:8px;--d:23s;--t:-23s;--c:0 206 201"></i>
+    <i style="--x:19%;--y:75%;--s:3px;--o:0.38;--b:8px;--d:24s;--t:-6s;--c:162 155 254"></i>
+    <i style="--x:26%;--y:65%;--s:2px;--o:0.42;--b:5px;--d:25s;--t:-18s;--c:232 67 147"></i>
+    <i style="--x:31%;--y:26%;--s:3px;--o:0.36;--b:5px;--d:16s;--t:-21s;--c:232 67 147"></i>
+    <i style="--x:41%;--y:30%;--s:2px;--o:0.40;--b:5px;--d:14s;--t:-3s;--c:162 155 254"></i>
+    <i style="--x:45%;--y:58%;--s:3px;--o:0.46;--b:8px;--d:26s;--t:-25s;--c:162 155 254"></i>
+    <i style="--x:55%;--y:18%;--s:3px;--o:0.41;--b:6px;--d:19s;--t:-21s;--c:232 67 147"></i>
+    <i style="--x:63%;--y:87%;--s:2px;--o:0.41;--b:7px;--d:26s;--t:-34s;--c:232 67 147"></i>
+    <i style="--x:69%;--y:54%;--s:3px;--o:0.45;--b:7px;--d:28s;--t:-20s;--c:0 206 201"></i>
+    <i style="--x:75%;--y:82%;--s:3px;--o:0.30;--b:7px;--d:28s;--t:-5s;--c:162 155 254"></i>
+    <i style="--x:81%;--y:72%;--s:3px;--o:0.41;--b:7px;--d:14s;--t:-16s;--c:0 206 201"></i>
+    <i style="--x:90%;--y:41%;--s:2px;--o:0.41;--b:8px;--d:18s;--t:-28s;--c:162 155 254"></i>
+    <i style="--x:95%;--y:12%;--s:2px;--o:0.36;--b:7px;--d:18s;--t:-7s;--c:232 67 147"></i>
+</div>
+
+        </div>
+        <div class="hero-particles-track particles-near">
+            
+
+<div class="hero-particle-field">
+    <i style="--x:9%;--y:53%;--s:4px;--o:0.53;--b:11px;--d:28s;--t:-22s;--c:162 155 254"></i>
+    <i style="--x:18%;--y:16%;--s:4px;--o:0.52;--b:9px;--d:13s;--t:-32s;--c:162 155 254"></i>
+    <i style="--x:29%;--y:87%;--s:3px;--o:0.59;--b:7px;--d:14s;--t:-11s;--c:0 206 201"></i>
+    <i style="--x:44%;--y:27%;--s:3px;--o:0.58;--b:7px;--d:14s;--t:-7s;--c:232 67 147"></i>
+    <i style="--x:59%;--y:37%;--s:4px;--o:0.51;--b:8px;--d:13s;--t:-23s;--c:232 67 147"></i>
+    <i style="--x:71%;--y:66%;--s:4px;--o:0.50;--b:7px;--d:20s;--t:-20s;--c:162 155 254"></i>
+    <i style="--x:76%;--y:46%;--s:4px;--o:0.50;--b:7px;--d:20s;--t:-10s;--c:232 67 147"></i>
+    <i style="--x:91%;--y:78%;--s:4px;--o:0.60;--b:11px;--d:27s;--t:-14s;--c:232 67 147"></i>
+</div>
+
+            
+
+<div class="hero-particle-field">
+    <i style="--x:9%;--y:53%;--s:4px;--o:0.53;--b:11px;--d:28s;--t:-22s;--c:162 155 254"></i>
+    <i style="--x:18%;--y:16%;--s:4px;--o:0.52;--b:9px;--d:13s;--t:-32s;--c:162 155 254"></i>
+    <i style="--x:29%;--y:87%;--s:3px;--o:0.59;--b:7px;--d:14s;--t:-11s;--c:0 206 201"></i>
+    <i style="--x:44%;--y:27%;--s:3px;--o:0.58;--b:7px;--d:14s;--t:-7s;--c:232 67 147"></i>
+    <i style="--x:59%;--y:37%;--s:4px;--o:0.51;--b:8px;--d:13s;--t:-23s;--c:232 67 147"></i>
+    <i style="--x:71%;--y:66%;--s:4px;--o:0.50;--b:7px;--d:20s;--t:-20s;--c:162 155 254"></i>
+    <i style="--x:76%;--y:46%;--s:4px;--o:0.50;--b:7px;--d:20s;--t:-10s;--c:232 67 147"></i>
+    <i style="--x:91%;--y:78%;--s:4px;--o:0.60;--b:11px;--d:27s;--t:-14s;--c:232 67 147"></i>
+</div>
+
+        </div>
+    </div>
+</div>
+
+        <h1 class="relative z-10 text-[clamp(2.8rem,6vw,4.5rem)] font-extrabold tracking-tighter leading-[1.1] max-w-[780px] mb-5">
+            <span class="block text-balance">Stream &amp; download</span>
+            <span class="block text-balance gradient-text">torrents in your browser</span>
+        </h1>
+    </div>
+
+    <p class="relative z-10 text-lg text-w-sub max-w-[560px] mb-12 leading-relaxed">
+        Paste a magnet link or upload a .torrent file to start watching or downloading instantly — a free web torrent player and online magnet downloader, no client required.
+    </p>
+    
+
+    
+
+    
+
+    
+    <div class="relative z-10 w-full max-w-[680px]">
+        
+        <form action="/" method="post" enctype="multipart/form-data" class="join w-full" data-async-target="main">
+            <div class="join-item flex items-center bg-base-300 border border-w-line rounded-l-[14px] flex-1 h-12 focus-within:border-w-pink focus-within:shadow-[0_0_40px_rgba(232,67,147,0.12)] transition-all">
+                <svg class="ml-4 shrink-0 text-w-muted" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                <input type="text" name="resource" value="" placeholder="Magnet link or infohash…" class="input bg-transparent border-0 focus:outline-none flex-1 text-base placeholder:text-w-muted font-sans" required />
+            </div>
+            <input name="instruction" value="" type="hidden" />
+            <button type="submit" class="btn join-item btn-pink px-7 h-12 rounded-r-[14px]" data-umami-event="search">Search</button>
+        </form>
+
+        
+        <div class="divider text-w-muted text-xs font-semibold tracking-widest uppercase my-5 before:bg-w-line after:bg-w-line">or</div>
+
+        
+        <form action="/" method="post" enctype="multipart/form-data" class="dropzone" data-async-target="main">
+            <label for="dropzone-input" class="upload-dashed rounded-2xl py-6 px-6 text-center cursor-pointer block">
+                <p class="text-[0.95rem] text-w-sub"><span class="text-w-pinkL font-semibold">Drop torrent file here</span> or click to browse</p>
+                <span class="badge badge-sm bg-white/5 border-0 text-w-muted mt-3">No size limit</span>
+            </label>
+            <input class="dropzone-input hidden" name="resource" type="file" />
+            <input name="instruction" value="" type="hidden" />
+        </form>
+
+        
+        <div class="flex justify-center items-center gap-4 mt-4">
+            <form action="/" method="post" enctype="multipart/form-data" data-async-target="main">
+                <input type="hidden" name="resource" value="magnet:?xt=urn:btih:08ada5a7a6183aae1e09d831df6748d566095a10" />
+                <input name="instruction" value="" type="hidden" />
+                <button type="submit" class="btn btn-ghost btn-sm text-w-muted gap-1.5 normal-case font-medium" data-umami-event="try-demo">
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    Try the demo
+                </button>
+            </form>
+            <a href="/speedtest" data-async-target="main" class="btn btn-ghost btn-sm text-w-muted gap-1.5 normal-case font-medium" data-umami-event="speedtest-hero">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                Speed test
+            </a>
+        </div>
+    </div>
+
+    
+    
+    
+
+
+    
+
+
+
+    <div class="mt-6 w-full max-w-[680px]">
+    
+    <div id="promo-banner" class="relative max-w-[680px] mx-auto z-10">
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a class="promo" href="/donate" target="_blank" data-umami-event="promo">
+        <span class="hidden md:inline">✨✨✨</span>
+        <span class="mx-2">Unlock speeds up to 50Mbps and enjoy no ads — 7-day free trial!</span>
+        <span class="hidden md:inline">✨✨✨</span>
+    </a>
+
+        <button data-promo-dismiss class="promo-close" aria-label="Close"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+        <script type="text/javascript" async src="/assets/promo.js?518e559c56702e1154eea408e83f5917"></script>
+    </div>
+    
+    </div>
+
+    <script type="text/javascript" async src="/assets/index.js?8856e910a3ec7adc8971c00b0020d794"></script>
+</section>
+
+
+
+
+
+
+<div class="bg-base-200 border-y border-w-line">
+    <div class="stats stats-horizontal bg-transparent w-full flex justify-center py-2">
+        <div class="stat text-center bg-transparent">
+            <div class="stat-value text-3xl font-extrabold tracking-tight gradient-stat">5M+</div>
+            <div class="stat-desc text-w-muted mt-1 text-sm">Torrents processed</div>
+        </div>
+        <div class="stat text-center bg-transparent">
+            <div class="stat-value text-3xl font-extrabold tracking-tight gradient-stat">180+</div>
+            <div class="stat-desc text-w-muted mt-1 text-sm">Countries</div>
+        </div>
+        <div class="stat text-center bg-transparent">
+            <div class="stat-value text-3xl font-extrabold tracking-tight gradient-stat">100%</div>
+            <div class="stat-desc text-w-muted mt-1 text-sm">Open-source</div>
+        </div>
+        <div class="stat text-center bg-transparent">
+            <div class="stat-value text-3xl font-extrabold tracking-tight gradient-stat">0</div>
+            <div class="stat-desc text-w-muted mt-1 text-sm">Software to install</div>
+        </div>
+    </div>
+</div>
+
+
+<div class="border-b border-w-line bg-transparent">
+    <div class="max-w-[1100px] mx-auto flex flex-wrap justify-center gap-x-8 gap-y-2 px-4 py-3 text-sm text-w-sub">
+        <span class="inline-flex items-center gap-2"><svg class="w-4 h-4 text-w-pink shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>No client to install</span>
+        <span class="inline-flex items-center gap-2"><svg class="w-4 h-4 text-w-pink shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Your IP never joins the swarm</span>
+        <span class="inline-flex items-center gap-2"><svg class="w-4 h-4 text-w-pink shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Encrypted over HTTPS</span>
+    </div>
+</div>
+
+
+
+
+
+
+<section id="how" class="py-24 px-3 sm:px-6">
+    <div class="max-w-[1100px] mx-auto">
+        <div class="badge badge-lg bg-w-pink/10 border-w-pink/30 text-w-pinkL gap-2 px-4 py-3 mb-5 text-xs font-semibold tracking-widest uppercase">
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            How it works
+        </div>
+        <h2 class="text-[clamp(2rem,4vw,2.8rem)] font-extrabold tracking-tight leading-tight mb-4">Three steps. That&#39;s it.</h2>
+        <p class="text-[1.05rem] text-w-sub max-w-[600px] leading-relaxed mb-14">Go from magnet link to streaming video or direct download in under a minute.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="card bg-base-300 border border-w-line hover:border-w-pink/30 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(232,67,147,0.1)] transition-all duration-300">
+                <div class="card-body">
+                    <div class="w-11 h-11 rounded-xl bg-w-pink/15 text-w-pink flex items-center justify-center font-bold text-lg">1</div>
+                    <h3 class="card-title text-[1.15rem] mt-3">Paste or upload</h3>
+                    <p class="text-[0.92rem] text-w-sub leading-relaxed">Enter a magnet link, infohash, or drag-and-drop a .torrent file into the browser.</p>
+                </div>
+            </div>
+            <div class="card bg-base-300 border border-w-line hover:border-w-pink/30 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(232,67,147,0.1)] transition-all duration-300">
+                <div class="card-body">
+                    <div class="w-11 h-11 rounded-xl bg-w-pink/15 text-w-pink flex items-center justify-center font-bold text-lg">2</div>
+                    <h3 class="card-title text-[1.15rem] mt-3">Pick your file</h3>
+                    <p class="text-[0.92rem] text-w-sub leading-relaxed">Browse the torrent contents and select the file you want to stream or download.</p>
+                </div>
+            </div>
+            <div class="card bg-base-300 border border-w-line hover:border-w-pink/30 hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(232,67,147,0.1)] transition-all duration-300">
+                <div class="card-body">
+                    <div class="w-11 h-11 rounded-xl bg-w-pink/15 text-w-pink flex items-center justify-center font-bold text-lg">3</div>
+                    <h3 class="card-title text-[1.15rem] mt-3">Stream or download</h3>
+                    <p class="text-[0.92rem] text-w-sub leading-relaxed">Watch video instantly in the built-in player, or grab a direct HTTP download link.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-10">
+            
+<div class="max-w-[1100px] mx-auto">
+    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5 sm:gap-8 p-6 sm:p-8 rounded-2xl border border-w-pink/25 bg-gradient-to-r from-w-pink/10 via-base-300 to-w-purple/10">
+        <a href="/discover" data-async-target="main" data-umami-event="discover-cta-click" data-umami-event-page="home" class="btn btn-lg btn-pink gap-2 px-8 shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
+            </svg>
+            Open Discover
+        </a>
+        <div class="min-w-0 flex-1">
+            <div class="text-base font-semibold mb-1">Not sure what to watch?</div>
+            <div class="text-[0.92rem] text-w-sub leading-relaxed">Discover is a catalog of movies and TV series with posters, ratings and AI recommendations. Pick a title and watch it online right in your browser.</div>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<section id="features" class="py-24 px-3 sm:px-6 bg-base-200">
+    <div class="max-w-[1100px] mx-auto">
+        <div class="badge badge-lg bg-w-pink/10 border-w-pink/30 text-w-pinkL gap-2 px-4 py-3 mb-5 text-xs font-semibold tracking-widest uppercase">
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12l2 2 4-4"/></svg>
+            Features
+        </div>
+        <h2 class="text-[clamp(2rem,4vw,2.8rem)] font-extrabold tracking-tight leading-tight mb-4">Everything you need, nothing you don&#39;t</h2>
+        <p class="text-[1.05rem] text-w-sub max-w-[600px] leading-relaxed mb-14">A complete torrent toolkit that runs entirely in the cloud and your browser.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <div class="card bg-base-300 border border-w-line hover:border-w-pink/30 hover:-translate-y-1 hover:shadow-[0_4px_24px_rgba(0,0,0,0.4)] transition-all duration-300">
+                <div class="card-body">
+                    <div class="w-12 h-12 rounded-xl bg-w-pink/12 text-w-pink flex items-center justify-center">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    </div>
+                    <h3 class="card-title text-[1.05rem] mt-3">Direct Download Links</h3>
+                    <p class="text-[0.9rem] text-w-sub leading-relaxed">Get a regular HTTP download link for any file inside the torrent. No VPN or client needed.</p>
+                </div>
+            </div>
+
+            <div class="card bg-base-300 border border-w-line hover:border-w-pink/30 hover:-translate-y-1 hover:shadow-[0_4px_24px_rgba(0,0,0,0.4)] transition-all duration-300">
+                <div class="card-body">
+                    <div class="w-12 h-12 rounded-xl bg-w-purple/12 text-w-purpleL flex items-center justify-center">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    </div>
+                    <h3 class="card-title text-[1.05rem] mt-3">Instant Streaming</h3>
+                    <p class="text-[0.9rem] text-w-sub leading-relaxed">Watch video and listen to audio directly in the browser without waiting for the full download.</p>
+                    <div class="card-actions mt-2">
+                        <span class="badge badge-sm bg-w-cyan/10 border-w-cyan/30 text-w-cyan text-[0.7rem] tracking-wide uppercase">MKV</span>
+                        <span class="badge badge-sm bg-w-cyan/10 border-w-cyan/30 text-w-cyan text-[0.7rem] tracking-wide uppercase">MP4</span>
+                        <span class="badge badge-sm bg-w-cyan/10 border-w-cyan/30 text-w-cyan text-[0.7rem] tracking-wide uppercase">WEBM</span>
+                        <span class="badge badge-sm bg-w-cyan/10 border-w-cyan/30 text-w-cyan text-[0.7rem] tracking-wide uppercase">AVI</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card bg-base-300 border border-w-line hover:border-w-pink/30 hover:-translate-y-1 hover:shadow-[0_4px_24px_rgba(0,0,0,0.4)] transition-all duration-300">
+                <div class="card-body">
+                    <div class="w-12 h-12 rounded-xl bg-w-cyan/12 text-w-cyan flex items-center justify-center">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <h3 class="card-title text-[1.05rem] mt-3">Stremio Integration</h3>
+                    <p class="text-[0.9rem] text-w-sub leading-relaxed">Watch your library on any smart TV or device running Stremio via the addon link.</p>
+                </div>
+            </div>
+
+            <div class="card bg-base-300 border border-w-line hover:border-w-pink/30 hover:-translate-y-1 hover:shadow-[0_4px_24px_rgba(0,0,0,0.4)] transition-all duration-300">
+                <div class="card-body">
+                    <div class="w-12 h-12 rounded-xl bg-w-cyan/12 text-w-cyan flex items-center justify-center">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
+                    </div>
+                    <h3 class="card-title text-[1.05rem] mt-3">TAR &amp; ZIP Archive Download</h3>
+                    <p class="text-[0.9rem] text-w-sub leading-relaxed">Download the entire torrent as a single TAR or ZIP archive on-the-fly, preserving the original folder structure.</p>
+                </div>
+            </div>
+
+            <div class="card bg-base-300 border border-w-line hover:border-w-pink/30 hover:-translate-y-1 hover:shadow-[0_4px_24px_rgba(0,0,0,0.4)] transition-all duration-300">
+                <div class="card-body">
+                    <div class="w-12 h-12 rounded-xl bg-w-pink/12 text-w-pink flex items-center justify-center">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg>
+                    </div>
+                    <h3 class="card-title text-[1.05rem] mt-3">Cloud Library</h3>
+                    <p class="text-[0.9rem] text-w-sub leading-relaxed">Save torrents to your account — movies and TV series are detected, enriched and organized automatically with AI. Mount the library as a network drive over WebDAV or S3, and upgrade to Vault for long-term storage that keeps files available even when seeders disappear.</p>
+                    <div class="card-actions mt-2">
+                        <span class="badge badge-sm bg-w-purple/10 border-w-purple/30 text-w-purpleL text-[0.7rem] tracking-wide uppercase">Vault</span>
+                        <span class="badge badge-sm bg-w-cyan/10 border-w-cyan/30 text-w-cyan text-[0.7rem] tracking-wide uppercase">AI</span>
+                        <span class="badge badge-sm bg-w-cyan/10 border-w-cyan/30 text-w-cyan text-[0.7rem] tracking-wide uppercase">WebDAV</span>
+                        <span class="badge badge-sm bg-w-cyan/10 border-w-cyan/30 text-w-cyan text-[0.7rem] tracking-wide uppercase">S3</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card bg-base-300 border border-w-line hover:border-w-pink/30 hover:-translate-y-1 hover:shadow-[0_4px_24px_rgba(0,0,0,0.4)] transition-all duration-300">
+                <div class="card-body">
+                    <div class="w-12 h-12 rounded-xl bg-w-cyan/12 text-w-cyan flex items-center justify-center">
+                        
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a4 4 0 0 1-2.275 2.275L3 12l5.813 1.912a4 4 0 0 1 2.275 2.275L12 21l1.912-5.813a4 4 0 0 1 2.275-2.275L21 12l-5.813-1.912a4 4 0 0 1-2.275-2.275z"/></svg>
+                        
+                    </div>
+                    
+                    <h3 class="card-title text-[1.05rem] mt-3">AI-Powered Discover</h3>
+                    <p class="text-[0.9rem] text-w-sub leading-relaxed">Describe what you want to watch in plain words and get a personalized list of films — each with a one-line reason tying it to your taste. Built on top of the Discover catalog.</p>
+                    <div class="card-actions mt-2">
+                        <span class="badge badge-sm bg-w-cyan/10 border-w-cyan/30 text-w-cyan text-[0.7rem] tracking-wide uppercase">AI</span>
+                        <span class="badge badge-sm bg-w-cyan/10 border-w-cyan/30 text-w-cyan text-[0.7rem] tracking-wide uppercase">Beta</span>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <a href="https://chromewebstore.google.com/detail/webtorio-watch-torrents-o/ngkpdaefpmokglfnmienfiaioffjodam" target="_blank" rel="noopener" class="group card bg-base-300 border border-w-line hover:border-w-pink/40 hover:-translate-y-1 hover:shadow-[0_4px_24px_rgba(0,0,0,0.4)] transition-all duration-300">
+                <div class="card-body">
+                    <div class="flex items-start justify-between gap-2">
+                        <div class="w-12 h-12 rounded-xl bg-w-pink/12 text-w-pink flex items-center justify-center">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.439 7.85c-.049.322.059.648.289.878l1.568 1.568c.47.47.706 1.087.706 1.704s-.235 1.233-.706 1.704l-1.611 1.611a.98.98 0 0 1-.837.276c-.47-.07-.802-.48-.968-.925a2.501 2.501 0 1 0-3.214 3.214c.446.166.855.497.925.968a.979.979 0 0 1-.276.837l-1.61 1.61a2.404 2.404 0 0 1-1.705.707 2.402 2.402 0 0 1-1.704-.706l-1.568-1.568a1.026 1.026 0 0 0-.877-.29c-.493.074-.84.504-1.02.968a2.5 2.5 0 1 1-3.237-3.237c.464-.18.894-.527.967-1.02a1.026 1.026 0 0 0-.289-.877l-1.568-1.568A2.402 2.402 0 0 1 1.998 12c0-.617.236-1.234.706-1.704L4.23 8.77c.24-.24.581-.353.917-.303.515.077.877.528 1.073 1.01a2.5 2.5 0 1 0 3.259-3.259c-.482-.196-.933-.558-1.01-1.073-.05-.336.062-.676.303-.917l1.525-1.525A2.402 2.402 0 0 1 12 1.998c.617 0 1.234.236 1.704.706l1.568 1.568c.23.23.556.338.877.29.493-.074.84-.504 1.02-.968a2.5 2.5 0 1 1 3.237 3.237c-.464.18-.894.527-.967 1.02Z"/></svg>
+                        </div>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-w-muted group-hover:text-w-pink group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all duration-300"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+                    </div>
+                    <h3 class="card-title text-[1.05rem] mt-3 group-hover:text-w-pink transition-colors duration-300">Chrome Extension</h3>
+                    <p class="text-[0.9rem] text-w-sub leading-relaxed">Install the extension and every torrent or magnet link you click opens automatically in Webtor.</p>
+                </div>
+            </a>
+
+            <a href="https://github.com/webtor-io/embed-sdk-js" target="_blank" rel="noopener" data-umami-event="home-embed-sdk" class="group card bg-base-300 border border-w-line hover:border-w-cyan/40 hover:-translate-y-1 hover:shadow-[0_4px_24px_rgba(0,0,0,0.4)] transition-all duration-300">
+                <div class="card-body">
+                    <div class="flex items-start justify-between gap-2">
+                        <div class="w-12 h-12 rounded-xl bg-w-cyan/12 text-w-cyan flex items-center justify-center">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        </div>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-w-muted group-hover:text-w-cyan group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all duration-300"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+                    </div>
+                    <h3 class="card-title text-[1.05rem] mt-3 group-hover:text-w-cyan transition-colors duration-300">Embed SDK</h3>
+                    <p class="text-[0.9rem] text-w-sub leading-relaxed">Embed the torrent streaming player on your own site with our open-source JavaScript SDK.</p>
+                    <div class="card-actions mt-2">
+                        <span class="badge badge-sm bg-w-cyan/10 border-w-cyan/30 text-w-cyan text-[0.7rem] tracking-wide uppercase">MIT License</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://api.webtor.io/v1/docs/index.html" target="_blank" rel="noopener" data-umami-event="home-api-docs" class="group card bg-base-300 border border-w-line hover:border-w-purple/40 hover:-translate-y-1 hover:shadow-[0_4px_24px_rgba(0,0,0,0.4)] transition-all duration-300">
+                <div class="card-body">
+                    <div class="flex items-start justify-between gap-2">
+                        <div class="w-12 h-12 rounded-xl bg-w-purple/12 text-w-purpleL flex items-center justify-center">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17V7a2 2 0 012-2h12a2 2 0 012 2v10"/><path d="M2 17h20v2a2 2 0 01-2 2H4a2 2 0 01-2-2v-2z"/><path d="M9 9l-2 2 2 2"/><path d="M15 9l2 2-2 2"/></svg>
+                        </div>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-w-muted group-hover:text-w-purpleL group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all duration-300"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+                    </div>
+                    <h3 class="card-title text-[1.05rem] mt-3 group-hover:text-w-purpleL transition-colors duration-300">Developer API</h3>
+                    <p class="text-[0.9rem] text-w-sub leading-relaxed">Add torrents, list files and get stream links from your own code — your library and Vault, driven over a REST API.</p>
+                    <div class="card-actions mt-2">
+                        <span class="badge badge-sm bg-w-purple/10 border-w-purple/30 text-w-purpleL text-[0.7rem] tracking-wide uppercase">REST</span>
+                        <span class="badge badge-sm bg-w-purple/10 border-w-purple/30 text-w-purpleL text-[0.7rem] tracking-wide uppercase">Beta</span>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+<section id="faq" class="py-24 px-3 sm:px-6">
+    
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is Webtor.io free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes, Webtor.io is completely free for basic use. You can stream and download torrents without creating an account. Optional paid plans remove ads, increase bandwidth, and unlock Vault cloud storage."}},{"@type":"Question","name":"Do I need a VPN to use Webtor.io? Will my ISP see what I download?","acceptedAnswer":{"@type":"Answer","text":"No VPN required. All traffic between you and Webtor.io travels over HTTPS. Your IP address is never exposed to the BitTorrent network because Webtor.io servers handle all peer communication. For your ISP, using Webtor.io looks no different from visiting any other website."}},{"@type":"Question","name":"Can I use Webtor.io on a phone or tablet?","acceptedAnswer":{"@type":"Answer","text":"Yes. Webtor.io works in any modern mobile browser on iOS and Android. You can stream video, listen to audio, and download torrents without installing any additional apps."}},{"@type":"Question","name":"What video and audio formats does Webtor.io support?","acceptedAnswer":{"@type":"Answer","text":"Webtor.io supports instant streaming for most popular formats. Video: AVI, MKV, MP4, WEBM, M4V, TS, VOB. Audio: MP3, WAV, OGG, FLAC, M4A. Files that require transcoding may take a moment longer to start playing."}},{"@type":"Question","name":"Is Webtor.io an open-source project?","acceptedAnswer":{"@type":"Answer","text":"Yes, 100%. All components of Webtor.io are distributed under the MIT license. You can visit the GitHub repository to view the source code and contribute."}},{"@type":"Question","name":"Can I watch my library on a smart TV?","acceptedAnswer":{"@type":"Answer","text":"Yes! With the Stremio integration you can stream your personal library on any smart TV or device running Stremio. Just install the addon using the link from your profile."}},{"@type":"Question","name":"How do I open a .torrent file in my browser?","acceptedAnswer":{"@type":"Answer","text":"Drag your .torrent file into the upload area at the top of this page, or paste a magnet link into the search field. Webtor opens it instantly — pick the video or audio file you want and stream it, or grab a direct download link. There's no torrent client to install and nothing to set up."}},{"@type":"Question","name":"What can I use to open a torrent file?","acceptedAnswer":{"@type":"Answer","text":"You don't need to install anything — Webtor opens torrent files right in your browser on Windows, Mac, Linux, Android, and iOS. Upload the .torrent file or paste a magnet link, then stream the video or save the files over a regular HTTPS download. Desktop clients like qBittorrent or uTorrent also work, but they require installation and connect your device to the torrent swarm."}},{"@type":"Question","name":"How do I download files from a magnet link without a torrent client?","acceptedAnswer":{"@type":"Answer","text":"Paste the magnet link into the search field at the top of this page. Webtor acts as an online magnet link downloader: it runs the magnet download in the cloud and gives you a direct HTTP download link for each file, plus a built-in player to stream video and audio. Your browser never connects to the BitTorrent network — Webtor servers handle that."}},{"@type":"Question","name":"How do I use a magnet link?","acceptedAnswer":{"@type":"Answer","text":"Paste the magnet link into the search field at the top of this page — Webtor opens it in seconds, with no client to install. You can also drag and drop a .torrent file instead. Webtor fetches the data on its own servers, so your browser never joins the BitTorrent swarm; you simply stream or download the files."}},{"@type":"Question","name":"How do I download torrented files without a torrent client?","acceptedAnswer":{"@type":"Answer","text":"Paste a magnet link or upload a .torrent file at the top of this page. Webtor fetches the torrent on its servers and gives you a direct HTTPS download link for every file — nothing to install, and it works on any device. Your browser never joins the BitTorrent swarm, so no open ports or client setup are needed."}},{"@type":"Question","name":"How do I unzip a torrent file?","acceptedAnswer":{"@type":"Answer","text":"A .torrent file is not an archive, so there is nothing to unzip — it's a small metadata file that only describes the real content. To get the actual files, open the .torrent with Webtor and download them one by one, or use the Torrent to ZIP tool to download everything as a single ZIP or TAR archive."}},{"@type":"Question","name":"Do download links or streams expire?","acceptedAnswer":{"@type":"Answer","text":"Yes, for security reasons direct download links and streaming sessions are temporary and may expire after a short time. You can always refresh or regenerate them from your library interface."}},{"@type":"Question","name":"How can I remove ads on Webtor.io?","acceptedAnswer":{"@type":"Answer","text":"Support the project and you'll get an ad-free experience, faster loading speeds, and a heart icon in the interface."}},{"@type":"Question","name":"Why do some downloaded ZIP archives show a CRC error?","acceptedAnswer":{"@type":"Answer","text":"ZIP archives are generated on-the-fly and don't include full checksum data, so some extraction tools may show a CRC warning even when the file is intact. That's why directory downloads now default to TAR — the TAR format has no per-file checksums, so even an interrupted and resumed download unpacks cleanly. If you prefer ZIP, pick it from the arrow menu next to the download button and use 7-Zip for best compatibility."}},{"@type":"Question","name":"Why is my download or streaming speed slow on Webtor.io?","acceptedAnswer":{"@type":"Answer","text":"Speeds may vary due to the number of seeders, file format (some require real-time transcoding), your internet connection, current server load, and your account type. Premium users get higher bandwidth."}}]}</script>
+    
+    <div class="max-w-[1100px] mx-auto">
+        <div class="text-center mb-14">
+            <div class="badge badge-lg bg-w-pink/10 border-w-pink/30 text-w-pinkL gap-2 px-4 py-3 mb-5 text-xs font-semibold tracking-widest uppercase">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                FAQ
+            </div>
+            <h2 class="text-[clamp(2rem,4vw,2.8rem)] font-extrabold tracking-tight leading-tight mb-4">Common questions</h2>
+            <p class="text-[1.05rem] text-w-sub max-w-[600px] mx-auto leading-relaxed">Quick answers to the things people ask most.</p>
+        </div>
+
+        <div class="max-w-[740px] mx-auto space-y-3">
+
+            <div class="collapse collapse-plus collapse-webtor border border-w-line rounded-2xl">
+                <input type="checkbox">
+                <div class="collapse-title text-base font-semibold">Is Webtor.io free to use?</div>
+                <div class="collapse-content"><p class="text-[0.92rem] text-w-sub leading-relaxed">Yes, Webtor.io is completely free for basic use. You can stream and download torrents without creating an account. Optional paid plans remove ads, increase bandwidth, and unlock Vault cloud storage.</p></div>
+            </div>
+
+            <div class="collapse collapse-plus collapse-webtor border border-w-line rounded-2xl">
+                <input type="checkbox">
+                <div class="collapse-title text-base font-semibold">Do I need a VPN to use Webtor.io? Will my ISP see what I download?</div>
+                <div class="collapse-content"><p class="text-[0.92rem] text-w-sub leading-relaxed">No VPN required. All traffic between you and Webtor.io travels over HTTPS. Your IP address is never exposed to the BitTorrent network because Webtor.io servers handle all peer communication. For your ISP, using Webtor.io looks no different from visiting any other website.</p></div>
+            </div>
+
+            <div class="collapse collapse-plus collapse-webtor border border-w-line rounded-2xl">
+                <input type="checkbox">
+                <div class="collapse-title text-base font-semibold">Can I use Webtor.io on a phone or tablet?</div>
+                <div class="collapse-content"><p class="text-[0.92rem] text-w-sub leading-relaxed">Yes. Webtor.io works in any modern mobile browser on iOS and Android. You can stream video, listen to audio, and download torrents without installing any additional apps.</p></div>
+            </div>
+
+            <div class="collapse collapse-plus collapse-webtor border border-w-line rounded-2xl">
+                <input type="checkbox">
+                <div class="collapse-title text-base font-semibold">What video and audio formats does Webtor.io support?</div>
+                <div class="collapse-content"><p class="text-[0.92rem] text-w-sub leading-relaxed">Webtor.io supports instant streaming for most popular formats. Video: AVI, MKV, MP4, WEBM, M4V, TS, VOB. Audio: MP3, WAV, OGG, FLAC, M4A. Files that require transcoding may take a moment longer to start playing.</p></div>
+            </div>
+
+            <div class="collapse collapse-plus collapse-webtor border border-w-line rounded-2xl">
+                <input type="checkbox">
+                <div class="collapse-title text-base font-semibold">Is Webtor.io an open-source project?</div>
+                <div class="collapse-content"><p class="text-[0.92rem] text-w-sub leading-relaxed">Yes, 100%. All components of Webtor.io are distributed under the MIT license. You can visit the GitHub repository to view the source code and contribute.</p></div>
+            </div>
+
+            <div class="collapse collapse-plus collapse-webtor border border-w-line rounded-2xl">
+                <input type="checkbox">
+                <div class="collapse-title text-base font-semibold">Can I watch my library on a smart TV?</div>
+                <div class="collapse-content"><p class="text-[0.92rem] text-w-sub leading-relaxed">Yes! With the Stremio integration you can stream your personal library on any smart TV or device running Stremio. Just install the addon using the link from your profile.</p></div>
+            </div>
+
+            <div class="collapse collapse-plus collapse-webtor border border-w-line rounded-2xl">
+                <input type="checkbox">
+                <div class="collapse-title text-base font-semibold">How do I open a .torrent file in my browser?</div>
+                <div class="collapse-content"><p class="text-[0.92rem] text-w-sub leading-relaxed">Drag your .torrent file into the upload area at the top of this page, or paste a magnet link into the search field. Webtor opens it instantly — pick the video or audio file you want and stream it, or grab a direct download link. There&#39;s no torrent client to install and nothing to set up.</p></div>
+            </div>
+
+            <div class="collapse collapse-plus collapse-webtor border border-w-line rounded-2xl">
+                <input type="checkbox">
+                <div class="collapse-title text-base font-semibold">What can I use to open a torrent file?</div>
+                <div class="collapse-content"><p class="text-[0.92rem] text-w-sub leading-relaxed">You don&#39;t need to install anything — Webtor opens torrent files right in your browser on Windows, Mac, Linux, Android, and iOS. Upload the .torrent file or paste a magnet link, then stream the video or save the files over a regular HTTPS download. Desktop clients like qBittorrent or uTorrent also work, but they require installation and connect your device to the torrent swarm.</p></div>
+            </div>
+
+            <div class="collapse collapse-plus collapse-webtor border border-w-line rounded-2xl">
+                <input type="checkbox">
+                <div class="collapse-title text-base font-semibold">How do I download files from a magnet link without a torrent client?</div>
+                <div class="collapse-content"><p class="text-[0.92rem] text-w-sub leading-relaxed">Paste the magnet link into the search field at the top of this page. Webtor acts as an online magnet link downloader: it runs the magnet download in the cloud and gives you a direct HTTP download link for each file, plus a built-in player to stream video and audio. Your browser never connects to the BitTorrent network — Webtor servers handle that.</p></div>
+            </div>
+
+            <div class="collapse collapse-plus collapse-webtor border border-w-line rounded-2xl">
+                <input type="checkbox">
+                <div class="collapse-title text-base font-semibold">How do I use a magnet link?</div>
+                <div class="collapse-content"><p class="text-[0.92rem] text-w-sub leading-relaxed">Paste the magnet link into the search field at the top of this page — Webtor opens it in seconds, with no client to install. You can also drag and drop a .torrent file instead. Webtor fetches the data on its own servers, so your browser never joins the BitTorrent swarm; you simply stream or download the files.</p></div>
+            </div>
+
+            <div class="collapse collapse-plus collapse-webtor border border-w-line rounded-2xl">
+                <input type="checkbox">
+                <div class="collapse-title text-base font-semibold">How do I download torrented files without a torrent client?</div>
+                <div class="collapse-content"><p class="text-[0.92rem] text-w-sub leading-relaxed">Paste a magnet link or upload a .torrent file at the top of this page. Webtor fetches the torrent on its servers and gives you a direct HTTPS download link for every file — nothing to install, and it works on any device. Your browser never joins the BitTorrent swarm, so no open ports or client setup are needed.</p></div>
+            </div>
+
+            <div class="collapse collapse-plus collapse-webtor border border-w-line rounded-2xl">
+                <input type="checkbox">
+                <div class="collapse-title text-base font-semibold">How do I unzip a torrent file?</div>
+                <div class="collapse-content"><p class="text-[0.92rem] text-w-sub leading-relaxed">A .torrent file is not an archive, so there is nothing to unzip — it&#39;s a small metadata file that only describes the real content. To get the actual files, open the .torrent with Webtor and download them one by one, or use the Torrent to ZIP tool to download everything as a single ZIP or TAR archive.</p></div>
+            </div>
+
+            
+            <div class="collapse collapse-plus collapse-webtor border border-w-line rounded-2xl">
+                <input type="checkbox">
+                <div class="collapse-title text-base font-semibold">What is Discover and how do the AI recommendations work?</div>
+                <div class="collapse-content"><p class="text-[0.92rem] text-w-sub leading-relaxed">Discover is a recommendations page powered by AI. Open it from the main navigation, type what you want to watch (or tap one of the suggested chips), and Webtor returns a personalized list of films — each with a short reason explaining why it fits your taste and what you&#39;ve watched before. Click any card to start streaming through your usual addons.</p></div>
+            </div>
+
+            <div class="collapse collapse-plus collapse-webtor border border-w-line rounded-2xl">
+                <input type="checkbox">
+                <div class="collapse-title text-base font-semibold">Is AI Discover free? How many requests do I get?</div>
+                <div class="collapse-content"><p class="text-[0.92rem] text-w-sub leading-relaxed">Yes — every account gets 2 free AI request(s) per day. Supporters of the project get 15 requests per day. Suggestion chips and the rest of the Discover catalog are unlimited; only the natural-language search counts against the daily quota.</p></div>
+            </div>
+
+            <div class="collapse collapse-plus collapse-webtor border border-w-line rounded-2xl">
+                <input type="checkbox">
+                <div class="collapse-title text-base font-semibold">What AI model powers the recommendations? Is my data safe?</div>
+                <div class="collapse-content"><p class="text-[0.92rem] text-w-sub leading-relaxed">Recommendations are generated by Anthropic&#39;s Claude — a fast model for the free tier and a more capable one for supporters. We send the model only your title/year/rating history. No email, IP address, or any other personal data is shared. The response is used purely to suggest films you can stream through your usual addons.</p></div>
+            </div>
+            
+
+            <div class="collapse collapse-plus collapse-webtor border border-w-line rounded-2xl">
+                <input type="checkbox">
+                <div class="collapse-title text-base font-semibold">Do download links or streams expire?</div>
+                <div class="collapse-content"><p class="text-[0.92rem] text-w-sub leading-relaxed">Yes, for security reasons direct download links and streaming sessions are temporary and may expire after a short time. You can always refresh or regenerate them from your library interface.</p></div>
+            </div>
+
+            <div class="collapse collapse-plus collapse-webtor border border-w-line rounded-2xl">
+                <input type="checkbox">
+                <div class="collapse-title text-base font-semibold">How can I remove ads on Webtor.io?</div>
+                <div class="collapse-content"><p class="text-[0.92rem] text-w-sub leading-relaxed">Support the project and you&#39;ll get an ad-free experience, faster loading speeds, and a heart icon in the interface.</p></div>
+            </div>
+
+            <div class="collapse collapse-plus collapse-webtor border border-w-line rounded-2xl">
+                <input type="checkbox">
+                <div class="collapse-title text-base font-semibold">Why do some downloaded ZIP archives show a CRC error?</div>
+                <div class="collapse-content"><p class="text-[0.92rem] text-w-sub leading-relaxed">ZIP archives are generated on-the-fly and don&#39;t include full checksum data, so some extraction tools may show a CRC warning even when the file is intact. That&#39;s why directory downloads now default to TAR — the TAR format has no per-file checksums, so even an interrupted and resumed download unpacks cleanly. If you prefer ZIP, pick it from the arrow menu next to the download button and use 7-Zip for best compatibility.</p></div>
+            </div>
+
+            <div class="collapse collapse-plus collapse-webtor border border-w-line rounded-2xl">
+                <input type="checkbox">
+                <div class="collapse-title text-base font-semibold">Why is my download or streaming speed slow on Webtor.io?</div>
+                <div class="collapse-content">
+                    <p class="text-[0.92rem] text-w-sub leading-relaxed mb-2">Speeds may vary due to the number of seeders, file format (some require real-time transcoding), your internet connection, current server load, and your account type. Premium users get higher bandwidth.</p>
+                    <p class="text-[0.92rem] text-w-sub leading-relaxed">Note: bandwidth is measured in Mbps (megabits per second), while file sizes are shown in MB (megabytes). 1 MB = 8 Mb, so a 50 Mbps connection gives roughly 6.25 MB/s download speed. Supporting the project helps unlock better speed and reliability.</p>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </div>
+</section>
+
+
+<section class="relative text-center py-24 px-3 sm:px-6 overflow-x-clip">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] cta-glow pointer-events-none"></div>
+    <h2 class="relative z-10 text-[clamp(2rem,4vw,2.8rem)] font-extrabold tracking-tight mb-4">Ready to try?</h2>
+    <p class="relative z-10 text-w-sub max-w-[500px] mx-auto mb-9">No signup needed. Paste a magnet link and start streaming in seconds.</p>
+    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" class="btn btn-lg btn-pink relative z-10 gap-2 px-9">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        Launch Webtor
+    </a>
+</section>
+
+
+
+
+            </main>
+        </div>
+        <div id="footer" data-async-layout="{{ template &#34;footer&#34; . }}">
+            
+    <footer class="bg-base-200 border-t border-w-line">
+        <div class="grid gap-8 grid-cols-2 md:grid-cols-[1.5fr_1fr_1fr_1fr_1fr] p-10 max-w-[1100px] mx-auto">
+            <aside>
+                <a href="/" data-async-target="main" class="font-logo text-[1.4rem] font-light no-underline">web<span class="text-w-pink">tor</span></a>
+                <p class="text-w-muted text-sm max-w-[280px] leading-relaxed mt-2">An open-source, browser-based torrent platform. Stream, download, and manage torrents without installing anything.</p>
+            </aside>
+            <nav class="flex flex-col gap-2">
+                <h6 class="footer-title text-w-muted">Tools</h6>
+                
+                    <a class="link link-hover text-sm text-w-sub hover:text-w-pinkL whitespace-nowrap" href="/torrent-to-ddl" data-async-target="main">Torrent → DDL</a>
+                
+                    <a class="link link-hover text-sm text-w-sub hover:text-w-pinkL whitespace-nowrap" href="/torrent-to-zip" data-async-target="main">Torrent → ZIP</a>
+                
+                    <a class="link link-hover text-sm text-w-sub hover:text-w-pinkL whitespace-nowrap" href="/magnet-to-ddl" data-async-target="main">Magnet to Direct Download (DDL)</a>
+                
+                    <a class="link link-hover text-sm text-w-sub hover:text-w-pinkL whitespace-nowrap" href="/magnet-to-torrent" data-async-target="main">Magnet → Torrent</a>
+                
+                    <a class="link link-hover text-sm text-w-sub hover:text-w-pinkL whitespace-nowrap" href="/torrent-to-stream" data-async-target="main">Torrent → Stream</a>
+                
+                    <a class="link link-hover text-sm text-w-sub hover:text-w-pinkL whitespace-nowrap" href="/watch-torrents-online" data-async-target="main">Watch Torrent Movies Online</a>
+                
+                    <a class="link link-hover text-sm text-w-sub hover:text-w-pinkL whitespace-nowrap" href="/watch-torrents-ios" data-async-target="main">Watch Torrents on iOS</a>
+                
+                    <a class="link link-hover text-sm text-w-sub hover:text-w-pinkL whitespace-nowrap" href="/online-torrent-downloader" data-async-target="main">Online Torrent Downloader</a>
+                
+                    <a class="link link-hover text-sm text-w-sub hover:text-w-pinkL whitespace-nowrap" href="/stream-torrent-online" data-async-target="main">Stream Torrent Online</a>
+                
+                    <a class="link link-hover text-sm text-w-sub hover:text-w-pinkL whitespace-nowrap" href="/torrent-player" data-async-target="main">Online Torrent Player</a>
+                
+                    <a class="link link-hover text-sm text-w-sub hover:text-w-pinkL whitespace-nowrap" href="/web-torrent-client" data-async-target="main">Web Torrent Client</a>
+                
+                    <a class="link link-hover text-sm text-w-sub hover:text-w-pinkL whitespace-nowrap" href="/cloud-torrent-client" data-async-target="main">Cloud Torrent Client</a>
+                
+                    <a class="link link-hover text-sm text-w-sub hover:text-w-pinkL whitespace-nowrap" href="/stremio-addons-online" data-async-target="main">Stremio Online</a>
+                
+                    <a class="link link-hover text-sm text-w-sub hover:text-w-pinkL whitespace-nowrap" href="/webtor-stremio-addon" data-async-target="main">Webtor Stremio Addon</a>
+                
+            </nav>
+            <nav class="flex flex-col gap-2">
+                <h6 class="footer-title text-w-muted">Resources</h6>
+                <a class="link link-hover text-sm text-w-sub hover:text-w-pinkL" href="/about" data-async-target="main">About</a>
+                <a class="link link-hover text-sm text-w-sub hover:text-w-pinkL" href="/speedtest" data-async-target="main">Speed Test</a>
+                <a class="link link-hover text-sm text-w-sub hover:text-w-pinkL" href="https://blog.webtor.io/en/post/" target="_blank">Blog</a>
+                <a class="link link-hover text-sm text-w-sub hover:text-w-pinkL" href="https://github.com/webtor-io/" target="_blank">GitHub</a>
+                <a class="link link-hover text-sm text-w-sub hover:text-w-pinkL" href="https://www.reddit.com/r/webtor/" target="_blank">Reddit</a>
+                <a class="link link-hover text-sm text-w-sub hover:text-w-pinkL" href="https://github.com/webtor-io/player-sdk-js" target="_blank">SDK</a>
+                <a class="link link-hover text-sm text-w-sub hover:text-w-pinkL" href="https://api.webtor.io/v1/docs/index.html" target="_blank" data-umami-event="footer-api-docs">API</a>
+                <a class="link link-hover text-sm text-w-sub hover:text-w-pinkL" href="https://rapidapi.com/paveltatarsky-Dx4aX7s_XBt/api/webtor/">RapidAPI</a>
+            </nav>
+            
+            <nav class="flex flex-col gap-2">
+                <h6 class="footer-title text-w-muted">Support</h6>
+                <a class="link link-hover text-sm text-w-sub hover:text-w-pinkL" href="/support" data-async-target="main">Help Center</a>
+            </nav>
+            <nav class="flex flex-col gap-2">
+                <h6 class="footer-title text-w-muted">Legal</h6>
+                <a class="link link-hover text-sm text-w-sub hover:text-w-pinkL" href="/legal/dmca" data-async-target="main">DMCA</a>
+                <a class="link link-hover text-sm text-w-sub hover:text-w-pinkL capitalize" href="/legal/privacy" data-async-target="main">Privacy Policy</a>
+                <a class="link link-hover text-sm text-w-sub hover:text-w-pinkL" href="/legal/tos" data-async-target="main">Terms of Service</a>
+                <a class="link link-hover text-sm text-w-sub hover:text-w-pinkL" href="/legal/refund" data-async-target="main">Refund Policy</a>
+            </nav>
+            
+        </div>
+        <div class="border-t border-w-line py-6 px-10">
+            <div class="max-w-[1100px] mx-auto flex justify-between items-center text-xs text-w-muted">
+                <span>Copyright © 2026 Webtor.io &middot; <span class="font-semibold">16&#43;</span></span>
+                <span>Film data from <a href="https://www.themoviedb.org/" target="_blank" class="link link-hover text-w-muted hover:text-w-pinkL">TMDB</a></span>
+                <div class="flex gap-5">
+                    <a href="https://github.com/webtor-io/" target="_blank" class="link link-hover text-w-muted hover:text-w-pinkL">GitHub</a>
+                    <a href="https://www.reddit.com/r/webtor/" target="_blank" class="link link-hover text-w-muted hover:text-w-pinkL">Reddit</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+        </div>
+        <div id="toast-container" class="toast toast-end toast-bottom z-toast" role="status" aria-live="assertive" aria-atomic="false"></div>
+        
+        <div id="onboarding-modal" data-async-layout="{{ template &#34;onboarding_checklist/modal&#34; (withContext $ .Onboarding) }}" data-async-update-nav="{{ template &#34;nav&#34; . }}"></div>
+        <script type="text/javascript" async src="/assets/layout.js?33e37567164d4349c7a9d01b12954cf2"></script>
+        <script type="text/javascript" async src="/assets/auth.js?41e52eaba1c96d620394f823d5d3677d"></script>
+        
+    <script>window.__CF$cv$params={r:'a280a0bc588ef416',t:'MTc4NjIxNDE5OQ==',u:'019fe2a9b2dd71419506e878604282ce',ut:'s1JsnmSKRYbufWlYEEzrXWGzzmqQgqKcSlGttw9kCXo-1786214200-1.2.1.1-tIadfjAUFVeiOarJa_XuJbyivHIhMOXBOXjEc_s.nAm7y5i3KOOVMwziKbS3orgRCMGcsizmjP5EVnjcUEWd5jMLAeuzBFwlMWXInC.f1YQ',i:60};(function(){if(!document.body)return;var s=document.createElement('script');s.src='/cdn-cgi/challenge-platform/scripts/precursor/main.js';document.head.appendChild(s);})();</script></body>
+</html>

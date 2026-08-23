@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta name="robots" content="index, follow" />
+<title>2Embed - Stream Movies, Tv-Shows, IMDB, TMDB API</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="2Embed is a movie, tv-series streaming API to stream movies by IMDB and TMDB ID. Biggest library to embed on your websites and blogs for free." />
+<meta name="keywords" content="2embed, movie streaming API, embed api, movie embed code for your websites and blogs" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link rel="stylesheet" href="/css/style.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<div id="wrapper">
+<style>
+@media only screen and (max-width:800px) {
+	#header_menu {
+		position: absolute;
+	}
+	#header_menu ul.header_menu-list{
+		background:#555;
+		margin-top:60px;
+	}
+}	
+</style>
+<div id="header">
+    <div class="container">
+		<div id="mobile_menu" onclick="headerMenu()" style="cursor:pointer;"><i class="fa fa-bars"></i></div>
+        <a href="/" id="logo" title="">
+            <img src="/images/logo.png" alt="2Embed">
+            <span>2Embed</span>
+            <div class="clearfix"></div>
+        </a>
+		        <div id="header_menu" style="display:block;">
+		            <ul class="nav header_menu-list">
+                <li class="nav-item"><a href="/" title="Home"><i class="fa fa-home"></i> Home</a></li>
+                <li class="nav-item"><a href="/trending" title="Trending Movies"><i class="fas fa-chart-bar"></i> Trending</a></li>
+                <li class="nav-item"><a href="/library" title="All Movies"><i class="fa fa-film"></i> Movies</a></li>
+                <li class="nav-item"><a href="/tvshows" title="All Tv-Shows"><i class="fa fa-tv"></i> Tv-Series</a></li>
+                <li class="nav-item"><a href="/#api" title="JSON API"><i class="fa fa-wrench"></i> API</a></li>
+                <li class="nav-item"><a href="https://blackninja.host/" target="_blank" title="DMCA Ignored Servers"><i class="fa fa-server"></i> DMCA Ignored Hosting</a></li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>    <div id="main-wrapper">
+        <div class="container">
+            <div class="home-top" style="padding-top:60px;">
+            <div class="sharethis-inline-share-buttons" data-url="https://www.2embed.cc/" style="text-align:center;margin-bottom:30px;"></div>
+                <div class="home-description" style="margin-bottom:40px;word-break:break-word;">
+                    <div class="intro"><img src="/images/intro.png" alt="2embed"></div>
+                    <p class="heading-small">2Embed.cc is backing up all the movies and tv-series please bear with us.</p>
+                    <br>
+                    <h5>Our Official Domains</h5>
+                    <h3 style="font-size: 18px;background: #000;padding: 10px;color: #999;margin-top: 10px;line-height: 1.5;"><span style="color: yellow;">https://www.2embed.cc/</span></h3>
+                    <h3 style="font-size: 18px;background: #000;padding: 10px;color: #999;margin-top: 10px;line-height: 1.5;"><span style="color: yellow;">https://www.2embed.skin/</span></h3>
+                    <br>
+                    <h5>Embed Movies</h5>
+                    <h3 style="font-size: 18px;background: #000;padding: 10px;color: #999;margin-top: 10px;line-height: 1.5;"><span style="color: yellow;">By IMDB ID =&gt;</span> https://www.2embed.cc/embed/<span style="color: yellow;">tt10676048</span></h3>
+                    <h3 style="font-size: 18px;background: #000;padding: 10px;color: #999;margin-top: 10px;line-height: 1.5;"><span style="color: yellow;">By TMDB ID =&gt;</span> https://www.2embed.cc/embed/<span style="color: yellow;">609681</span></h3>
+                    <br>
+                    <h5>Embed Tv-Series by Season and Episode Number</h5>
+                    <h3 style="font-size: 18px;background: #000;padding: 10px;color: #999;margin-top: 10px;line-height: 1.5;"><span style="color: yellow;">By IMDB ID =&gt;</span> https://www.2embed.cc/embedtv/<span style="color: yellow;">tt3107288</span>&s=<span style="color: yellow;">1</span>&e=<span style="color: yellow;">1</span></h3>
+                    <h3 style="font-size: 18px;background: #000;padding: 10px;color: #999;margin-top: 10px;line-height: 1.5;"><span style="color: yellow;">By TMDB ID =&gt;</span> https://www.2embed.cc/embedtv/<span style="color: yellow;">60735</span>&s=<span style="color: yellow;">1</span>&e=<span style="color: yellow;">1</span></h3>
+                    <h3 style="font-size: 18px;background: #000;padding: 10px;color: #999;margin-top: 10px;line-height: 1.5;">Embed Complete TV Seasons</h3>
+                    <h3 style="font-size: 18px;background: #000;padding: 10px;color: #999;margin-top: 10px;line-height: 1.5;"><span style="color: yellow;">By IMDB ID =&gt;</span> https://www.2embed.cc/embedtvfull/<span style="color: yellow;">tt3107288</span></h3>
+                    <h3 style="font-size: 18px;background: #000;padding: 10px;color: #999;margin-top: 10px;line-height: 1.5;"><span style="color: yellow;">By TMDB ID =&gt;</span> https://www.2embed.cc/embedtvfull/<span style="color: yellow;">60735</span></h3>
+                    <br>
+                    <h5 id="api">JSON API for Movies & Tv-Shows</h5>
+                    <p class="heading-small">Below is a step-by-step guide to our JSON API endpoints. All endpoints support <strong style="color:yellow">imdb_id / tmdb_id</strong> parameters and return full JSON metadata.</p>
+                    <div class="api-guide">
+					<h3 style="font-size: 18px;background: #000;padding: 10px;color: #999;margin-top: 10px;line-height: 1.5;">
+					  Movie Details =&gt; <a href="https://api.2embed.cc/movie?imdb_id=tt5950044" target="_blank" style="color:yellow">https://api.2embed.cc/movie?imdb_id={tt…}</a>
+					</h3>
+					<h3 style="font-size: 18px;background: #000;padding: 10px;color: #999;margin-top: 10px;line-height: 1.5;">
+					  Trending Movies =&gt; <a href="https://api.2embed.cc/trending?time_window=day&page=1" target="_blank" style="color:yellow">https://api.2embed.cc/trending?time_window={day|week|month}&amp;page={1…N}</a>
+					</h3>
+					<h3 style="font-size: 18px;background: #000;padding: 10px;color: #999;margin-top: 10px;line-height: 1.5;">
+					  Search Movies =&gt; <a href="https://api.2embed.cc/search?q=avengers&page=1" target="_blank" style="color:yellow">https://api.2embed.cc/search?q={keyword}&amp;page={1…N}</a>
+					</h3>
+					<h3 style="font-size: 18px;background: #000;padding: 10px;color: #999;margin-top: 10px;line-height: 1.5;">
+					  Similar Movies =&gt; <a href="https://api.2embed.cc/similar?imdb_id=tt31036941&page=1" target="_blank" style="color:yellow">https://api.2embed.cc/similar?imdb_id={tt…}&amp;page={1…N}</a>
+					</h3>
+					<h3 style="font-size: 18px;background: #000;padding: 10px;color: #999;margin-top: 10px;line-height: 1.5;">
+					  TV Details =&gt; <a href="https://api.2embed.cc/tv?imdb_id=tt0944947" target="_blank" style="color:yellow">https://api.2embed.cc/tv?imdb_id={tt…}</a>
+					</h3>					
+					<h3 style="font-size: 18px;background: #000;padding: 10px;color: #999;margin-top: 10px;line-height: 1.5;">
+					  Trending TV Shows =&gt; <a href="https://api.2embed.cc/trendingtv?time_window=day&page=1" target="_blank" style="color:yellow">https://api.2embed.cc/trendingtv?time_window={day|week|month}&amp;page={1…N}</a>
+					</h3>
+					<h3 style="font-size: 18px;background: #000;padding: 10px;color: #999;margin-top: 10px;line-height: 1.5;">
+					  Search TV Shows =&gt; <a href="https://api.2embed.cc/searchtv?q=the+flash&page=1" target="_blank" style="color:yellow">https://api.2embed.cc/searchtv?q={keyword}&amp;page={1…N}</a>
+					</h3>
+					<h3 style="font-size: 18px;background: #000;padding: 10px;color: #999;margin-top: 10px;line-height: 1.5;">
+					  Similar TV Shows =&gt; <a href="https://api.2embed.cc/similartv?imdb_id=tt3107288&page=1" target="_blank" style="color:yellow">https://api.2embed.cc/similartv?imdb_id={tt…}&amp;page={1…N}</a>
+					</h3>
+					<h3 style="font-size: 18px;background: #000;padding: 10px;color: #999;margin-top: 10px;line-height: 1.5;">
+					  Season Details =&gt; <a href="https://api.2embed.cc/season?imdb_id=tt3107288&season=1" target="_blank" style="color:yellow">https://api.2embed.cc/season?imdb_id={tt…}&amp;season={1…N}</a>
+					</h3>
+				  </div>
+				<br><br>
+                    <h2 class="heading-large mb-3">Get movies and tv shows stream by IMDB/TMDB ID URLs, 2Embed.cc is the best movie streaming API in 2023.</h2>
+                    <p class="heading-small">2Embed.cc is a continued and enhanced version of "2embed.ru" and "2embed.to" with direct and fast streaming mechanism and 2embed index only full-hd movies, tv-series whenever its available on the internet.</p>
+                </div>
+                <!--/End: Description-->
+                <div class="clearfix"></div>            
+            </div>
+            <!--/End: Home top-->
+        </div>
+    </div>
+<div id="footer">
+<div class="container">
+	<div class="copyright"><a rel="nofollow" href="https://www.google.com/search?q=2embed.cc" target="_blank">2Embed</a> &copy; 2023 - 2026</div>
+	<div class="footer-links">
+		<ul class="float-left ulclear">
+			<li><a href="/" title="Home">Home</a></li>
+			<li><a href="/library" title="Library">Library</a></li>
+			<li><a href="https://fmovies-net.com/" title="Fmovies" target="_blank">Fmovies</a></li>
+			<li><a href="https://flixhq.lat/" title="FlixHQ" target="_blank">FlixHQ</a></li>
+			<li><a href="https://hdtoday.homes/" title="HDToday" target="_blank">HDToday</a></li>
+		</ul>
+	</div>
+	<div class="clearfix"></div>
+</div>
+<img src="https://whos.amung.us/widget/ytsembed/" style="display:none;">
+</div><div style="text-align:center;">Disclaimer: we does not store any files on our servers, all the videos are hosted on non affiliated 3rd party services.</div>
+<br><br>
+</div>
+<script src="/js/app.js"></script>
+<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=647e5affa660b80019d56035&product=inline-share-buttons' async='async'></script>
+</body>
+</html>
