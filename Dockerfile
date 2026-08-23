@@ -11,6 +11,7 @@ RUN rpm -e --nodeps curl-minimal && \
     rm -rf /var/cache/yum && \
     curl -fsSL https://rpm.nodesource.com/setup_20.x | bash - && \
     microdnf install -y nodejs && \
+    microdnf install -y epel-release && \
     rpm -ivh https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-9.noarch.rpm https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-9.noarch.rpm && \
     microdnf install -y ffmpeg && \
     microdnf clean all && \
