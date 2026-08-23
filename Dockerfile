@@ -14,9 +14,10 @@ RUN rpm -e --nodeps curl-minimal && \
     microdnf install -y dnf dnf-plugins-core && \
     dnf config-manager --set-enabled ubi-9-appstream-rpms && \
     dnf config-manager --set-enabled epel && \
+    dnf config-manager --set-enabled ubi-9-codeready-builder && \
     rpm -ivh https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-9.noarch.rpm https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-9.noarch.rpm && \
     dnf config-manager --set-enabled rpmfusion-free-updates rpmfusion-nonfree-updates && \
-    dnf install -y ffmpeg && \
+    dnf install -y SDL2 ffmpeg && \
     dnf clean all && \
     rm -rf /var/cache/dnf
 
