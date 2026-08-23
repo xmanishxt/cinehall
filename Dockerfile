@@ -12,8 +12,10 @@ RUN rpm -e --nodeps curl-minimal && \
     curl -fsSL https://rpm.nodesource.com/setup_20.x | bash - && \
     microdnf install -y nodejs && \
     rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm && \
+    microdnf install -y dnf-plugins-core && \
+    /usr/bin/crb enable && \
     rpm -ivh https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-9.noarch.rpm https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-9.noarch.rpm && \
-    microdnf install -y ffmpeg && \
+    microdnf install -y ffmpeg SDL2 && \
     microdnf clean all && \
     rm -rf /var/cache/yum
 
