@@ -13,8 +13,10 @@ RUN rpm -e --nodeps curl-minimal && \
     rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm && \
     microdnf install -y dnf dnf-plugins-core && \
     dnf config-manager --set-enabled ubi-9-appstream-rpms && \
-    rpm -ivh https://download1.rpmfusion.org/free/el/rpmfusion-free-release-9.noarch.rpm https://download1.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-9.noarch.rpm && \
-    dnf config-manager --set-enabled rpmfusion-free-updates rpmfusion-nonfree-updates && \
+    dnf config-manager --set-enabled ubi-9-codeready-builder && \
+    dnf config-manager --set-enabled epel && \
+    rpm -ivh https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-9.noarch.rpm https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-9.noarch.rpm && \
+    dnf config-manager --set-enabled rpmfusion-free rpmfusion-free-updates rpmfusion-nonfree rpmfusion-nonfree-updates && \
     dnf install -y ffmpeg && \
     dnf clean all && \
     rm -rf /var/cache/dnf
