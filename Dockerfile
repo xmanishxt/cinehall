@@ -12,8 +12,8 @@ RUN rpm -e --nodeps curl-minimal && \
     curl -fsSL https://rpm.nodesource.com/setup_20.x | bash - && \
     microdnf install -y nodejs && \
     rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm && \
-    microdnf install -y dnf dnf-plugins-core && \
-    dnf config-manager --set-enabled codeready-builder-for-rhel-9-$(arch)-rpms && \
+    microdnf install -y dnf && \
+    dnf config-manager --set-enabled ubi-9-appstream-rpms && \
     rpm -ivh https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-9.noarch.rpm https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-9.noarch.rpm && \
     microdnf install -y ffmpeg && \
     microdnf clean all && \
