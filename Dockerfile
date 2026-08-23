@@ -3,8 +3,7 @@
 FROM registry.access.redhat.com/ubi9/ubi-minimal:9.5
 
 # Install Node.js 20 from NodeSource, yt-dlp, ffmpeg, curl, python3
-RUN microdnf update -y && \
-    microdnf install -y curl python3 python3-pip shadow-utils && \
+RUN microdnf install -y curl python3 python3-pip shadow-utils && \
     microdnf clean all && \
     rm -rf /var/cache/yum && \
     curl -fsSL https://rpm.nodesource.com/setup_20.x | bash - && \
