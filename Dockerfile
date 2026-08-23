@@ -3,9 +3,9 @@
 FROM registry.access.redhat.com/ubi9/ubi-minimal:9.5
 
 # Install Node.js 20 from NodeSource, yt-dlp, ffmpeg, python3
-# Use microdnf swap to replace curl-minimal with curl in single transaction
-RUN microdnf swap -y curl-minimal curl && \
-    microdnf install -y python3 python3-pip shadow-utils && \
+# Use rpm to remove curl-minimal, then install curl in same RUN
+RUN rpm -e --nodeps curl-minimal && \
+    microdnf install -y curl python3 python3-pip shadow-utils && \
     microdnf clean all && \
     rm -rf /var/cache/yum && \
     curl -fsSL https://rpm.nodesource.com/setup_20.x | bash - && \
