@@ -4,12 +4,15 @@ FROM registry.access.redhat.com/ubi9/ubi-minimal:9.5
 
 # Install Node.js 20 from NodeSource, yt-dlp, ffmpeg, python3
 # Use rpm to remove curl-minimal, then install curl in same RUN
+# Install ffmpeg from RPM Fusion (not available in UBI base repos)
 RUN rpm -e --nodeps curl-minimal && \
     microdnf install -y curl python3 python3-pip shadow-utils && \
     microdnf clean all && \
     rm -rf /var/cache/yum && \
     curl -fsSL https://rpm.nodesource.com/setup_20.x | bash - && \
-    microdnf install -y nodejs ffmpeg && \
+    microdnf install -y nodejs && \
+    microdnf install -y https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-9.noarch.rpm https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-9.noarch.rpm && \
+    microdnf install -y ffmpeg && \
     microdnf clean all && \
     rm -rf /var/cache/yum
 
