@@ -16,7 +16,7 @@ RUN rpm -e --nodeps curl-minimal && \
     dnf config-manager --set-enabled epel && \
     rpm -ivh https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-9.noarch.rpm https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-9.noarch.rpm && \
     dnf config-manager --set-enabled rpmfusion-free-updates rpmfusion-nonfree-updates && \
-    dnf install -y sdl2 ffmpeg && \
+    dnf install -y SDL2-devel ffmpeg && \
     dnf clean all && \
     rm -rf /var/cache/dnf
 
