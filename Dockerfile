@@ -1,9 +1,9 @@
 # CineHall Custom Image for OpenShift
-# Base: UBI 9 (full, not minimal) - includes AppStream with more packages
+# Base: UBI 9 (full) - includes AppStream repository with ffmpeg
 FROM registry.access.redhat.com/ubi9/ubi:9.5
 
 # Install Node.js 20 from NodeSource, yt-dlp, ffmpeg, python3
-# Use dnf for full repo support including SDL2 dependency for ffmpeg
+# Use dnf with full repo support - install ffmpeg from AppStream (avoids RPM Fusion SDL2 issue)
 RUN rpm -e --nodeps curl-minimal && \
     dnf install -y curl python3 python3-pip shadow-utils && \
     dnf clean all && \
@@ -11,7 +11,6 @@ RUN rpm -e --nodeps curl-minimal && \
     curl -fsSL https://rpm.nodesource.com/setup_20.x | bash - && \
     dnf install -y nodejs && \
     dnf config-manager --set-enabled ubi-9-appstream-rpms && \
-    dnf config-manager --set-enabled ubi-9-codeready-builder && \
     dnf install -y ffmpeg && \
     dnf clean all && \
     rm -rf /var/cache/dnf
