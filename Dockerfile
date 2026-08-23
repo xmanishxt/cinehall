@@ -2,9 +2,13 @@
 # Base: UBI 9 minimal (Red Hat Universal Base Image) - non-root compatible
 FROM registry.access.redhat.com/ubi9/ubi-minimal:9.5
 
-# Install Node.js 20, yt-dlp, ffmpeg, curl, python3 (for yt-dlp)
+# Install Node.js 20 from NodeSource, yt-dlp, ffmpeg, curl, python3
 RUN microdnf update -y && \
-    microdnf install -y nodejs-20 npm ffmpeg curl python3 python3-pip shadow-utils && \
+    microdnf install -y curl python3 python3-pip shadow-utils && \
+    microdnf clean all && \
+    rm -rf /var/cache/yum && \
+    curl -fsSL https://rpm.nodesource.com/setup_20.x | bash - && \
+    microdnf install -y nodejs ffmpeg && \
     microdnf clean all && \
     rm -rf /var/cache/yum
 
@@ -19,13 +23,13 @@ RUN useradd -u 1001 -r -g 0 -d /opt/app -s /sbin/nologin -c "CineHall App User" 
 WORKDIR /opt/app
 
 # Copy package files first (for layer caching)
-COPY --chown=1001:0 work/CineHall/package*.json ./
+COPY --chown=1001:0 package*.json ./
 
 # Install npm dependencies
 RUN npm ci --only=production 2>/dev/null || npm install --only=production
 
 # Copy application source code
-COPY --chown=1001:0 work/CineHall/ ./
+COPY --chown=1001:0 . ./
 
 # Create data/cache directories with correct permissions
 RUN mkdir -p /opt/app/data/cache && \
