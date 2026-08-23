@@ -3,13 +3,12 @@
 FROM registry.access.redhat.com/ubi9/ubi-minimal:9.5
 
 # Install Node.js 20 from NodeSource, yt-dlp, ffmpeg, python3
-# Remove curl-minimal first (pre-installed in ubi-minimal) to avoid conflict with full curl
-RUN microdnf remove -y curl-minimal && \
-    microdnf install -y curl python3 python3-pip shadow-utils && \
+# Install curl in same transaction to replace curl-minimal (avoids rpm dependency issue)
+RUN microdnf install -y curl python3 python3-pip shadow-utils --setopt=install_weak_deps=0 && \
     microdnf clean all && \
     rm -rf /var/cache/yum && \
     curl -fsSL https://rpm.nodesource.com/setup_20.x | bash - && \
-    microdnf install -y nodejs ffmpeg && \
+    microdnf install -y nodejs ffmpeg --setopt=install_weak_deps=0 && \
     microdnf clean all && \
     rm -rf /var/cache/yum
 
